@@ -4,23 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hazim's Portfolio - About Me</title>
-
-    <!-- Google Font: VT323 -->
+    <link rel="icon" href="imgs/sakamoto.PNG" type="imgs/sakamoto.PNG">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-
-    <!-- Your Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Your JavaScript (defer ensures it runs after HTML is parsed) -->
     <script src="script.js" defer></script>
 </head>
-<body class="dark-mode">
-
-    <!-- ======================= -->
-    <!--     MAIN NAVIGATION     -->
-    <!-- ======================= -->
+<body class="dark-mode"> <canvas id="particle-canvas"></canvas> 
     <header class="main-header pixel-border">
         <nav class="main-nav">
             <div class="nav-logo">
@@ -38,159 +29,156 @@
 
     <main class="container">
 
-        <!-- ======================= -->
-        <!--    ABOUT ME & PROFILE   -->
-        <!-- ======================= -->
-        <section class="about-me">
+        <!-- about me, profile -->
+        <section class="about-layout">
             <div class="window pixel-border">
                 <div class="window-titlebar">
                     <span>[ user_profile.ini ]</span>
                 </div>
-                <div class="window-content about-layout">
-                    
-                    <!-- Left Column: Text Content -->
-                    <div class="about-text">
-                        <h2>[ About Me ]</h2>
-                        <p>
-                            Hello! I'm Hazim, a Gameplay Programmer and Project Manager from Malaysia, currently finishing my Bachelor's in Computer Games Development at APU.
-                        </p>
-                        <p>
-                            My journey began with a Diploma in ICT, which built my foundation in technology. Now, I'm driven by a passion for building engaging gameplay systems and leading creative teams from concept to a polished final product.
-                        </p>
+                <div class="window-content">
+                    <div class="profile-content-layout">
 
-                        <h3>[ Professional & Management Experience ]</h3>
-                        <p>
-                            My leadership and management skills aren't just academic. As an **Event Manager**, I've led teams of up to 14 people to execute a corporate talk with Samsung, run a university game booth (exceeding fundraising goals by 33%), and organize an online tournament for 44 participants.
-                        </p>
-                        <p>
-                            As an **IT Research Assistant Intern**, I designed digital graphic assets and edited video content for e-commerce. I also run my own 5-star rated storefront on Carousell, managing everything from product photography to customer service and sales. This diverse experience has given me a 360-degree view of the product lifecycle.
-                        </p>
-                    </div>
-                    
-                    <!-- Right Column: Visuals -->
-                    <div class="about-visual">
-                        <!-- Replace this with your actual headshot -->
-                        <img src="https://placehold.co/400x400/2a2a2a/d4d4d4?text=Hazim's+Headshot" alt="A professional headshot of Hazim" class="pixel-border headshot">
-                        
-                        <div class="core-competencies">
-                            <h3>[ Core Competencies ]</h3>
-                            
-                            <div class="skill-item">
-                                <span class="skill-name">Unity (C#) Programming</span>
-                                <div class="skill-bar">
-                                    <div class="skill-bar-inner skill-bar-prog" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-item">
-                                <span class="skill-name">Project Management</span>
-                                <div class="skill-bar">
-                                    <div class="skill-bar-inner skill-bar-pm" style="width: 85%;"></div>
-                                </div>
-                            </div>
+                        <!-- bio, experience -->
+                        <div class="profile-text">
+                            <h2>About Me</h2>
+                            <p>
+                                Hello! I'm Hazim, a Gameplay Programmer, Project Manager, and Game Developer based in Malaysia. My passion lies in creating engaging game systems and leading motivated teams from an initial concept to a polished, final product.
+                            </p>
+                            <p>
+                                With a strong foundation in both Computer Games Development and Interactive Technology, I thrive on solving complex problems—whether it's programming physics for a grappling hook in Unity, managing a 14-person event team, or designing digital assets for e-commerce.
+                            </p>
+                            <h2 class="subsection-title">Professional & E-Commerce Experience</h2>
+                            <h4>IT Research Assistant (Intern) @ Admiral IT Sdn Bhd | Oct - Nov 2024</h4>
+                            <p>
+                                I was responsible for designing digital graphic assets tailored for e-commerce products, editing short-form video content to support marketing initiatives, 
+                                and overseeing the design and production of company apparel. This role allowed me to blend creativity with technical execution in a fast-paced commercial environment.
+                            </p>
+                            <br>
+                            <h4>Independent Seller @ Carousell</h4>
+                            <p>
+                                In addition, as an Independent Seller on Carousell, I manage all aspects of a 5-star rated personal storefront. My responsibilities include product photography, customer service, and handling sales logistics—ensuring a seamless experience 
+                                from listing to delivery.
+                            </p>
+                        </div> 
+                        <!-- prof pic -->
+                        <div class="profile-visual">
+                             <img src="imgs/sakamoto.PNG" alt="Hazim's Headshot" class="headshot pixel-border">
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </section> 
 
-                            <div class="skill-item">
-                                <span class="skill-name">Unreal Engine (Blueprints)</span>
-                                <div class="skill-bar">
-                                    <div class="skill-bar-inner skill-bar-unreal" style="width: 75%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                </div> <!-- /.about-layout -->
-            </div> <!-- /.window -->
+        <!-- education -->
+        <section class="education-window">
+            <div class="window pixel-border">
+                <div class="window-titlebar">
+                    <span>[ education.ini ]</span>
+                </div>
+                <div class="window-content">
+                    <h3>Bachelor of Science (Honours) in Computer Games Development</h3>
+                    <p class="education-institution">Asia Pacific University (APU)</p>
+                    <h3 class="education-second-degree">Diploma in Information & Communication Technology (Interactive Technology)</h3>
+                    <p class="education-institution">Asia Pacific University (APU)</p>
+                    <h3>Sijil Pelajaran Malaysia</h3>
+                    <p class="education-institution">SMK Seri Indah</p>
+                </div>
+            </div>
         </section>
 
-
-        <!-- ======================= -->
-        <!--     FULL SKILL GRID     -->
-        <!-- ======================= -->
-        <section class="skills-section">
+        <!-- skills -->
+        <section class="skills-window">
             <div class="window pixel-border">
                 <div class="window-titlebar">
                     <span>[ skills.dat ]</span>
                 </div>
                 <div class="window-content">
-                    <h2>[ Full Technical Skills ]</h2>
+                    <div class="skill-columns">
+                        <div class="skill-column">
+                            <div class="skill-list-container">
+                                <h4>[ Core Competencies ]</h4>
+                                <ul>
+                                    <li>Unity (C#) Programming</li>
+                                    <li>Unreal Engine (Blueprints)</li>
+                                    <li>Project Management (Agile)</li>
+                                    <li>Game & Level Design</li>
+                                </ul>
+                            </div>
 
-                    <h3>Languages</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item-logo">[ C# ]</div>
-                        <div class="skill-item-logo">[ Python ]</div>
-                        <div class="skill-item-logo">[ Java ]</div>
-                        <div class="skill-item-logo">[ JavaScript ]</div>
-                        <div class="skill-item-logo">[ PHP ]</div>
-                        <div class="skill-item-logo">[ SQL ]</div>
-                        <div class="skill-item-logo">[ HTML/CSS ]</div>
-                    </div>
+                            <div class="skill-list-container">
+                                <h4>[ Languages ]</h4>
+                                <ul>
+                                    <li>C# <span class="primary">(Primary)</span></li>
+                                    <li>Python</li>
+                                    <li>Java</li>
+                                    <li>JavaScript</li>
+                                    <li>PHP</li>
+                                    <li>SQL (MySQL)</li>
+                                    <li>HTML / CSS</li>
+                                </ul>
+                            </div>
+                            
+                        </div> 
 
-                    <h3>Game Engines / Tools</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item-logo">[ Unity ]</div>
-                        <div class="skill-item-logo">[ Unreal Engine ]</div>
-                        <div class="skill-item-logo">[ Pygame ]</div>
-                        <div class="skill-item-logo">[ Blender ]</div>
-                        <div class="skill-item-logo">[ Adobe Photoshop ]</div>
-                        <div class="skill-item-logo">[ Figma ]</div>
-                        <div class="skill-item-logo">[ Aseprite ]</div>
-                        <div class="skill-item-logo">[ Davinci Resolve ]</div>
-                    </div>
-
-                    <h3>Concepts</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item-logo">[ Gameplay Design ]</div>
-                        <div class="skill-item-logo">[ Level Design ]</div>
-                        <div class="skill-item-logo">[ 3D Character Modeling ]</div>
-                        <div class="skill-item-logo">[ Pixel Art ]</div>
-                    </div>
-
-                </div> <!-- /.window-content -->
-            </div> <!-- /.window -->
+                        <div class="skill-column">
+                            <div class="skill-list-container">
+                                <h4>[ Game Engines & Frameworks ]</h4>
+                                <ul>
+                                    <li>Unity</li>
+                                    <li>Unreal Engine</li>
+                                    <li>Pygame</li>
+                                </ul>
+                            </div>
+                            <div class="skill-list-container">
+                                <h4>[ Design & Production Tools ]</h4>
+                                <ul>
+                                    <li>Blender (3D Modeling)</li>
+                                    <li>Aseprite (Pixel Art)</li>
+                                    <li>Adobe Photoshop</li>
+                                    <li>Figma (UI/UX)</li>
+                                    <li>Davinci Resolve (Video Editing)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+            </div> 
         </section>
-
     </main>
 
-    <!-- ======================= -->
-    <!--         FOOTER          -->
-    <!-- ======================= -->
+    <!-- footer -->
     <footer class="main-footer">
         <div class="social-links">
-            <a href="[Your-LinkedIn-URL]" target="_blank">[ LinkedIn ]</a>
-            <a href="[Your-Itch-URL]" target="_blank">[ Itch.io ]</a>
-            <a href="[Your-GitHub-URL]" target="_blank">[ GitHub ]</a>
+            <a href="https://www.linkedin.com/in/muhdhazimabdhalim/" target="_blank">[ LinkedIn ]</a>
+            <a href="https://hajimbo.itch.io/" target="_blank">[ Itch.io ]</a>
+            <a href="https://github.com/Hajimbo04" target="_blank">[ GitHub ]</a>
         </div>
         <p>&copy; 2025 Hazim. All systems nominal.</p>
     </footer>
 
-    <!-- ======================= -->
-    <!--      PROJECT MODAL      -->
-    <!-- ======================= -->
-    <!-- This is hidden by default with CSS (Shared across all pages) -->
+    <!-- project modal -->
+    <!-- hidden with CSS (shared across all pages) -->
     <div id="project-modal" class="modal-overlay">
         <div class="window pixel-border" id="modal-window">
             <div class="window-titlebar">
                 <span id="modal-title">[ project.exe ]</span>
                 <div class="window-buttons">
-                    <!-- This 'X' is a real button -->
                     <button id="modal-close" class="window-btn">X</button>
                 </div>
             </div>
             <div class="window-content modal-content-layout">
                 <div class="modal-media" id="modal-media">
-                    <!-- Media (video/img) goes here -->
                     <img src="https://placehold.co/600x400/2a2a2a/d4d4d4?text=Project+Media" alt="Project Media">
                 </div>
                 <div class="modal-details">
                     <p id="modal-description">Project description goes here.</p>
                     <div class="project-tags" id="modal-tags">
-                        <!-- Tags go here -->
                     </div>
                     <a href="#" id="modal-details-link" class="btn-pixel" target="_blank">View Full Details</a>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>

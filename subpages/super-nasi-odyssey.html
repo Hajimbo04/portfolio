@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazim's Portfolio - Super Nasi Odyssey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
+</head>
+<body class="dark-mode">
+    <header class="main-header pixel-border">
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <a href="../index.html">[ Hajimbo ]</a>
+            </div>
+            <ul>
+                <li><a href="../index.html">[ Home ]</a></li>
+                <li><a href="../projects.html" class="active">[ Projects ]</a></li>
+                <li><a href="../about.html">[ About ]</a></li>
+                <li><a href="../contact.html">[ Contact ]</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="btn-pixel">Light Mode</button>
+    </header>
+
+    <main class="container container-project-page">
+        <div class="project-layout-wrapper">
+            <section class="project-detail-window">
+                <div class="window pixel-border">
+                    <div class="window-titlebar">
+                        <span>[ super_nasi_odyssey.exe ]</span>
+                    </div>
+                    <div class="window-content">
+                        <img src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Gasing+Guardian+Hero" alt="Gasing Guardian Hero" class="project-hero-image pixel-border">                
+                        <h1>Super Nasi Odyssey</h1>
+                        <div class="project-tags">
+                            <span class="tag-pm">Project Manager</span>
+                            <span class="tag-prog">Gameplay Programmer</span>
+                        </div>
+                        <div class="project-detail-layout">                            
+                            <div class="project-description">
+                                <h2>Project Overview</h2>
+                                <p>
+                                    Gasing Guardian is a 3D physics-based platformer created in Unity. The game blends traditional Malaysian culture with fast-paced, modern gameplay. Players control a hero armed with a "gasing" (a traditional top) which functions as a versatile grappling hook, combat weapon, and puzzle-solving tool.
+                                </p>  
+                                <h2>My Contributions</h2>
+                                <p>
+                                    As the Project Manager, I led a team of 5, organizing sprints, managing tasks via Trello, and ensuring we met all our milestones for this academic capstone project.
+                                </p>
+                                <p>
+                                    As the lead Gameplay Programmer, my primary responsibilities included:
+                                </p>
+                                <ul class="contribution-list">
+                                    <li>
+                                        <strong>Physics-Based Grappling Hook:</strong> Engineered the core gasing mechanic from scratch, allowing for swinging, pulling, and aiming with a predictable arc.
+                                    </li>
+                                    <li>
+                                        <strong>Player Combat System:</strong> Developed the state machine for player combat, including melee strikes with the gasing, a ranged throw-and-recall ability, and interaction with physics objects.
+                                    </li>
+                                    <li>
+                                        <strong>Enemy AI:</strong> Programmed the basic AI for ground-based enemies, including patrol states, player detection, and a "stunned" state when hit by the gasing.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </div> 
+                    <div class="resize-handle"></div>
+                </div> 
+            </section>
+    
+            <div class="right-column-stack">
+                <section class="project-gallery-window">
+                    <div class="window pixel-border">
+                        <div class="window-titlebar">
+                            <span>[ gallery.exe ]</span>
+                        </div>
+                        <div class="window-content gallery-container-new">
+                            <h2>[ Gallery ]</h2>
+                            <div class="gallery-main-image pixel-border">
+                                <img id="gallery-main-display" src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Gameplay+Screenshot+1" alt="Main gallery view">
+                            </div>
+                            <div class="gallery-thumbnail-row">
+                                <img class="gallery-thumb pixel-border active" 
+                                    src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Gameplay+Screenshot+1" 
+                                    data-src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Gameplay+Screenshot+1" 
+                                    alt="Gallery thumbnail 1">
+                                <img class="gallery-thumb pixel-border" 
+                                    src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Grappling+Hook+In+Action" 
+                                    data-src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Grappling+Hook+In+Action" 
+                                    alt="Gallery thumbnail 2">
+                                <img class="gallery-thumb pixel-border" 
+                                    src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Enemy+Combat" 
+                                    data-src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Enemy+Combat" 
+                                    alt="Gallery thumbnail 3">
+                                <img class="gallery-thumb pixel-border" 
+                                    src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Level+Design" 
+                                    data-src="https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Level+Design" 
+                                    alt="Gallery thumbnail 4">
+                            </div>
+                        </div>
+                        <div class="resize-handle"></div>
+                    </div>
+                </section>
+
+                <div class="window pixel-border">
+                    <div class="window-titlebar">
+                        <span>[ fast_facts.exe ]</span>
+                    </div>
+                    <div class="window-content project-key-details"> 
+                        <h3>[ Fast Facts ]</h3>
+                        <ul>
+                            <li><strong>Role:</strong> Project Manager, Gameplay Programmer</li>
+                            <li><strong>Tools:</strong> Unity, C#, Blender, Photoshop</li>
+                            <li><strong>Platform:</strong> PC (Windows)</li>
+                            <li><strong>Team Size:</strong> 5</li>
+                            <li><strong>Duration:</strong> 14 Weeks (Final Year Project)</li>
+                        </ul>
+                        <a href="https://hajimbo.itch.io/gasing-guardian" target="_blank" class="btn-pixel">Play on Itch.io</a>
+                    </div>
+                    <div class="resize-handle"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="main-footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/muhdhazimabdhalim/" target="_blank">[ LinkedIn ]</a>
+            <a href="https://hajimbo.itch.io/" target="_blank">[ Itch.io ]</a>
+            <a href="https://github.com/Hajimbo04" target="_blank">[ GitHub ]</a>
+        </div>
+        <p>&copy; 2025 Hazim. All systems nominal.</p>
+    </footer>
+
+    <!-- project modal -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="window pixel-border" id="modal-window">
+            <div class="window-titlebar">
+                <span id="modal-title">[ project.exe ]</span>
+                <div class="window-buttons">
+                    <button id="modal-close" class="window-btn">X</button>
+                </div>
+            </div>
+            <div class="window-content modal-content-layout">
+                <div class="modal-media" id="modal-media">
+                    <img src="https://placehold.co/600x400/2a2a2a/d4d4d4?text=Project+Media" alt="Project Media">
+                </div>
+                <div class="modal-details">
+                    <p id="modal-description">Project description goes here.</p>
+                    <div class="project-tags" id="modal-tags">
+                    </div>
+                    <a href="#" id="modal-details-link" class="btn-pixel" target="_blank">View Full Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

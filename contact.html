@@ -4,23 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hazim's Portfolio - Contact</title>
-
-    <!-- Google Font: VT323 -->
+    <link rel="icon" href="imgs/sakamoto.PNG" type="imgs/sakamoto.PNG">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-
-    <!-- Your Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Your JavaScript (defer ensures it runs after HTML is parsed) -->
     <script src="script.js" defer></script>
 </head>
-<body class="dark-mode">
-
-    <!-- ======================= -->
-    <!--     MAIN NAVIGATION     -->
-    <!-- ======================= -->
+<body class="dark-mode"> <canvas id="particle-canvas"></canvas>
     <header class="main-header pixel-border">
         <nav class="main-nav">
             <div class="nav-logo">
@@ -37,10 +28,7 @@
     </header>
 
     <main class="container">
-
-        <!-- ======================= -->
-        <!--     CONTACT SECTION     -->
-        <!-- ======================= -->
+        <!-- contact section -->
         <section class="contact-section">
             <div class="window pixel-border">
                 <div class="window-titlebar">
@@ -58,66 +46,57 @@
                         creative ideas, or just connecting with other people in the industry.
                     </p>
                     <div class="contact-links">
-                        <!-- Add your real URLs in the href attributes -->
-                        <a href="[Your-LinkedIn-URL]" target="_blank" class="btn-pixel contact-btn linkedin">
+                        <a href="https://www.linkedin.com/in/muhdhazimabdhalim/" target="_blank" class="btn-pixel contact-btn linkedin">
                             [ LinkedIn ]
                         </a>
-                        <a href="[Your-Itch-URL]" target="_blank" class="btn-pixel contact-btn itch">
+                        <a href="https://hajimbo.itch.io/" target="_blank" class="btn-pixel contact-btn itch">
                             [ Itch.io ]
                         </a>
-                        <a href="[Your-GitHub-URL]" target="_blank" class="btn-pixel contact-btn github">
+                        <a href="https://github.com/Hajimbo04" target="_blank" class="btn-pixel contact-btn github">
                             [ GitHub ]
                         </a>
-                        <a href="mailto:[your-email@example.com]" class="btn-pixel contact-btn email">
-                            [ Email Me ]
+                        <a href="mailto:[muhdhazim13035@gmail.com]" class="btn-pixel contact-btn email">
+                            [ Email Me : muhdhazim13035@gmail.com ]
                         </a>
                     </div>
-                </div> <!-- /.window-content -->
-            </div> <!-- /.window -->
+                </div> 
+            </div>
         </section>
 
     </main>
 
-    <!-- ======================= -->
-    <!--         FOOTER          -->
-    <!-- ======================= -->
+    <!-- footer -->
     <footer class="main-footer">
         <div class="social-links">
-            <a href="[Your-LinkedIn-URL]" target="_blank">[ LinkedIn ]</a>
-            <a href="[Your-Itch-URL]" target="_blank">[ Itch.io ]</a>
-            <a href="[Your-GitHub-URL]" target="_blank">[ GitHub ]</a>
+            <a href="https://www.linkedin.com/in/muhdhazimabdhalim/" target="_blank">[ LinkedIn ]</a>
+            <a href="https://hajimbo.itch.io/" target="_blank">[ Itch.io ]</a>
+            <a href="https://github.com/Hajimbo04" target="_blank">[ GitHub ]</a>
         </div>
         <p>&copy; 2025 Hazim. All systems nominal.</p>
     </footer>
 
-    <!-- ======================= -->
-    <!--      PROJECT MODAL      -->
-    <!-- ======================= -->
-    <!-- This is hidden by default with CSS (Shared across all pages) -->
+    <!-- project modal -->
+    <!-- hidden with CSS (shared across all pages) -->
     <div id="project-modal" class="modal-overlay">
         <div class="window pixel-border" id="modal-window">
             <div class="window-titlebar">
                 <span id="modal-title">[ project.exe ]</span>
                 <div class="window-buttons">
-                    <!-- This 'X' is a real button -->
                     <button id="modal-close" class="window-btn">X</button>
                 </div>
             </div>
             <div class="window-content modal-content-layout">
                 <div class="modal-media" id="modal-media">
-                    <!-- Media (video/img) goes here -->
                     <img src="https://placehold.co/600x400/2a2a2a/d4d4d4?text=Project+Media" alt="Project Media">
                 </div>
                 <div class="modal-details">
                     <p id="modal-description">Project description goes here.</p>
                     <div class="project-tags" id="modal-tags">
-                        <!-- Tags go here -->
                     </div>
                     <a href="#" id="modal-details-link" class="btn-pixel" target="_blank">View Full Details</a>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
