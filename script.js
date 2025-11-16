@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    //   PARTICLE BACKGROUND   //
+    //   PARTICLE BACKGROUND  
     const canvas = document.getElementById('particle-canvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
@@ -20,8 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         };
-
-        // function to draw the particles
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = particleColor;
@@ -42,8 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animate(); 
         window.addEventListener('resize', setup);
     }
-
-    //    DRAGGABLE WINDOWS    //
+    //    DRAGGABLE WINDOWS   
     const allWindows = document.querySelectorAll('main .window');
     let highestZ = 10; 
     allWindows.forEach(windowEl => {
@@ -56,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let initialMouseX, initialMouseY;
 
         windowEl.addEventListener('mousedown', () => {
-            highestZ++; // Increment global z-index
+            highestZ++; 
             windowEl.style.zIndex = highestZ;
         }, { capture: true }); 
 
@@ -70,14 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('mousemove', drag);
             document.addEventListener('mouseup', dragEnd);
         });
-
         function drag(e) {
             if (!isDragging) return;
             const dx = e.clientX - initialMouseX;
             const dy = e.clientY - initialMouseY;
             windowEl.style.transform = `translate(${xOffset + dx}px, ${yOffset + dy}px)`;
         }
-
         function dragEnd(e) {
             if (!isDragging) return;
             isDragging = false;
@@ -91,14 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
             xOffset = xOffset + (e.clientX - initialMouseX);
             yOffset = yOffset + (e.clientY - initialMouseY);
         }
-
-        //   RESIZABLE WINDOW LOGIC     //
+        //   RESIZABLE WINDOW LOGIC    
         const resizeHandle = windowEl.querySelector('.resize-handle');
         const minWidth = 300;
         const minHeight = 250;
         let isResizing = false;
         let initialWidth, initialHeight;
-
         if (resizeHandle) {
             resizeHandle.addEventListener('mousedown', (e) => {
                 e.preventDefault();
@@ -112,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.addEventListener('mousemove', resizeWindow);
                 document.addEventListener('mouseup', stopResize);
             });
-
             function resizeWindow(e) {
                 if (!isResizing) return;
                 const dx = e.clientX - initialMouseX;
@@ -124,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 windowEl.style.width = newWidth + 'px';
                 windowEl.style.height = newHeight + 'px';
             }
-
             function stopResize() {
                 isResizing = false;
                 document.body.style.cursor = 'default';
@@ -133,19 +123,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    
-    //     THEME TOGGLE        //
+    //   THEME TOGGLE
     const themeToggleBtn = document.getElementById('theme-toggle');
-    themeToggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        if (document.body.classList.contains('light-mode')) {
+    const applyTheme = (theme) => {
+        if (theme === 'light') {
+            document.body.classList.add('light-mode');
             themeToggleBtn.textContent = 'Dark Mode';
         } else {
+            document.body.classList.remove('light-mode');
             themeToggleBtn.textContent = 'Light Mode';
         }
+    };
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme);
+    themeToggleBtn.addEventListener('click', () => {
+        const isCurrentlyLight = document.body.classList.contains('light-mode');
+        const newTheme = isCurrentlyLight ? 'dark' : 'light';
+        applyTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
     });
-
-    //   CAROUSEL LOGIC   //
+    //   CAROUSEL LOGIC   
     const carouselContainer = document.querySelector('.all-projects-carousel .carousel-container');
     if (carouselContainer) {
         const track = carouselContainer.querySelector('.carousel-track');
@@ -155,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let cardWidth = 0;
         let visibleSlides = 1;
         let currentIndex = 0;
-
         const updateCarouselSizing = () => {
             const containerWidth = carouselContainer.getBoundingClientRect().width;
             const firstCard = cards[0];
@@ -166,8 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
             visibleSlides = Math.floor(containerWidth / cardWidth);
             if (visibleSlides < 1) visibleSlides = 1; 
         };
-
-        // Function to move the carousel
         const moveToSlide = (targetIndex) => {
             if (targetIndex < 0) {
                 targetIndex = 0;
@@ -192,8 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
             moveToSlide(currentIndex);
         });
     }
-
-    //   CARD HOVER PREVIEW    //
+    //   CARD HOVER PREVIEW  
     const allProjectCards = document.querySelectorAll('.project-card');
     let hoverTimer = null; 
     allProjectCards.forEach(card => {
@@ -201,7 +194,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!video) {
             return; 
         }
-
         card.addEventListener('mouseenter', () => {
             hoverTimer = setTimeout(() => {
                 video.play()
@@ -219,9 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
             video.load(); 
         });
     });
-
-
-    //   PROJECT MODAL LOGIC   //
+    //   PROJECT MODAL LOGIC 
     const modal = document.getElementById('project-modal');
     const modalCloseBtn = document.getElementById('modal-close');
     const allCards = document.querySelectorAll('.project-card'); 
@@ -245,7 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     itchLink.href = '#';
                     itchLink.style.display = 'none';
                 }
-
                 const mediaContainer = document.getElementById('modal-media');
                 if (mediaUrl.endsWith('.mp4') || mediaUrl.endsWith('.webm')) {
                     mediaContainer.innerHTML = `
@@ -256,7 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img src="${mediaUrl}" alt="${title} media">
                     `;
                 }
-                
                 // tags
                 const tagsContainer = document.getElementById('modal-tags');
                 tagsContainer.innerHTML = ''; 
@@ -296,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    //  PROJECT FILTER LOGIC   //
+    //  PROJECT FILTER 
     const filterContainer = document.querySelector('.filter-buttons');
     if (filterContainer) {
         const filterButtons = filterContainer.querySelectorAll('.filter-btn');
@@ -317,8 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    //   GALLERY LOGIC     //
+    //   GALLERY LOGIC  
     const galleryContainer = document.querySelector('.gallery-container-new');
     if (galleryContainer) {
         const mainDisplay = document.getElementById('gallery-main-display');
@@ -331,7 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 thumb.classList.add('active');
             });
         });
-
         if (thumbnails.length > 0) {
             thumbnails[0].classList.add('active');
             mainDisplay.src = thumbnails[0].getAttribute('data-src');
@@ -339,6 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
     else {
         console.log('New gallery not found on this page.');
-    }
-    
-});
+    }  
+}
+);

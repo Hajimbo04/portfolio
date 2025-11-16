@@ -30,7 +30,6 @@
     <div id="page-content-wrapper">
 
     <main class="container container-project-page">
-        <!-- projects explorer -->
         <section class="projects-explorer">
             <div class="window pixel-border">
                 <div class="window-titlebar">
@@ -49,9 +48,7 @@
                         <button class="btn-pixel filter-btn" data-filter="software">[ Software ]</button>
                         <button class="btn-pixel filter-btn" data-filter="others">[ Others ]</button>
                     </div>
-
                     <div class="project-grid">
-                        
                         <!-- Academic -->
                         <div class="project-card" 
                             data-category="academic"
@@ -167,6 +164,27 @@
                             </div>
                         </div>
 
+                        <div class="project-card"
+                            data-category="academic"
+                            data-title="Paper Adventure"
+                            data-media="https://placehold.co/600x400/2a2a2a/d4d4d4?text=Paper+Adventure+Preview"
+                            data-description="Managed a team of 5, designed all puzzles, and wrote the game narrative based on a 2D-to-3D world-switching mechanic."
+                            data-tags="Project Manager,Level Designer,Puzzle Designer,Writer"
+                            data-details-page="project-paper-adventure.html">
+                            <video muted loop playsinline
+                                poster="imgs/gamethumbs/paperthumb.png"
+                                src="static/videos/paper-adventure-preview.mp4"
+                                alt="Paper Adventure Thumbnail">
+                            </video>
+                            <h3>Paper Adventure</h3>
+                            <div class="project-tags">
+                                <span class="tag-pm">Project Manager</span>
+                                <span class="tag-design">Level Designer</span>
+                                <span class="tag-design">Puzzle Designer</span>
+                                <span class="tag-writing">Writer</span>
+                            </div>
+                        </div>
+
                         <!-- Game Jam -->
                         <div class="project-card"
                             data-category="gamejam"
@@ -255,7 +273,7 @@
                                 src="static/videos/hrm-system-preview.mp4"
                                 alt="HRM System Thumbnail">
                             </video>
-                            <h3>HRM System</h3>
+                            <h3>HR Management System</h3>
                             <div class="project-tags">
                                 <span class="tag-prog">Co-developer</span>
                                 <span class="tag-java">Java</span>
@@ -274,7 +292,7 @@
                                    src="static/videos/hrm-system-preview.mp4"
                                    alt="Python System Thumbnail">
                             </video>
-                            <h3>Python System</h3>
+                            <h3>Service Management System</h3>
                             <div class="project-tags">
                                 <span class="tag-prog">Co-developer</span>
                                 <span class="tag-python">Python</span>
@@ -289,9 +307,9 @@
                             data-tags="Co-developer,Python"
                             data-details-page="project-hrm-system.html">
                             <video muted loop playsinline
-                                   poster="imgs/gamethumbs/ajarthumb.PNG"
-                                   src="static/videos/hrm-system-preview.mp4"
-                                   alt="Web App System Thumbnail">
+                                poster="imgs/gamethumbs/ajarthumb.PNG"
+                                src="static/videos/hrm-system-preview.mp4"
+                                alt="Web App System Thumbnail">
                             </video>
                             <h3>Ajar Akademi</h3>
                             <div class="project-tags">
@@ -314,55 +332,75 @@
                                 alt="CC1 Event Thumbnail">
                             </video>
                             <h3>CC1 Event</h3>
-                                <div class="project-tags">
-                                    <span class="tag-pm">Event Manager</span>
-                                    <span class="tag-market">Marketing</span>
-                                </div>
+                            <div class="project-tags">
+                                <span class="tag-pm">Event Manager</span>
+                                <span class="tag-market">Marketing</span>
                             </div>
+                        </div>
 
-                            <div class="project-card"
-                                data-category="others"
-                                data-title="CC2 Event"
-                                data-media="https://placehold.co/600x400/2a2a2a/d4d4d4?text=CC2+Event"
-                                data-description="Managed a 14-person team to run a physical university game booth, directing all operations and exceeding fundraising goals by 33%."
-                                data-tags="Event Manager"
-                                data-details-page="project-cc2.html">
+                        <div class="project-card"
+                            data-category="others"
+                            data-title="CC2 Event"
+                            data-media="https://placehold.co/600x400/2a2a2a/d4d4d4?text=CC2+Event"
+                            data-description="Managed a 14-person team to run a physical university game booth, directing all operations and exceeding fundraising goals by 33%."
+                            data-tags="Event Manager"
+                            data-details-page="project-cc2.html">
                             <video muted loop playsinline
                                 poster="imgs/gamethumbs/cc2thumb.PNG"
                                 src="is-this-your-video.mp4"
                                 alt="CC2 Event Thumbnail">
                             </video>
                             <h3>CC2 Event</h3>
-                                <div class="project-tags">
-                                    <span class="tag-pm">Event Manager</span>
-                                </div>
+                            <div class="project-tags">
+                                <span class="tag-pm">Event Manager</span>
+                                <span class ="tag-market">Marketing</span>
                             </div>
+                        </div>
 
-                            <div class="project-card"
-                                data-category="others"
-                                data-title="Internship Talk Event"
-                                data-media="httpsAs-this-your-video.mp4"
-                                data-description="Led a 14-person team to plan and execute a professional internship talk with Samsung, overseeing marketing, PR, and event-day logistics."
-                                data-tags="Event Manager"
-                                data-details-page="project-intern-talk.html">
+                        <div class="project-card"
+                            data-category="others"
+                            data-title="Internship Talk Event"
+                            data-media="httpsAs-this-your-video.mp4"
+                            data-description="Led a 14-person team to plan and execute a professional internship talk with Samsung, overseeing marketing, PR, and event-day logistics."
+                            data-tags="Event Manager"
+                            data-details-page="project-intern-talk.html">
                             <video muted loop playsinline
                                 poster="imgs/gamethumbs/samsungthumb.PNG"
                                 src="is-this-your-video.mp4"
                                 alt="Internship Talk Event Thumbnail">
                             </video>
                             <h3>Samsung Internship Talk Event</h3>
-                                <div class="project-tags">
-                                    <span class="tag-pm">Event Manager</span>
-                                </div>
+                            <div class="project-tags">
+                                <span class="tag-pm">Event Manager</span>
                             </div>
+                        </div>
 
-                            <div class="project-card"
-                                data-category="others"
-                                data-title="PSA Video"
-                                data-media="httpsAs-this-your-video.mp4"
-                                data-description="Served as the primary actor and narrator for a PSA video educating viewers on the dangers of oversharing personal information on social media."
-                                data-tags="Actor"
-                                data-details-page="project-psa-video.html">
+                        <div class="project-card"
+                            data-category="others"
+                            data-title="Scoop-n-Go Booth"
+                            data-media="https://placehold.co/600x400/2a2a2a/d4d4d4?text=Event+Booth"
+                            data-description="Assisted as project manager and marketing lead, designing posters and helping the team exceed the fundraising target by 100%."
+                            data-tags="Event Manager,Marketing"
+                            data-details-page="project-spin-wheel.html">
+                            <video muted loop playsinline
+                                poster="imgs/gamethumbs/spinwheelthumb.png"
+                                src="static/videos/spin-wheel-preview.mp4"
+                                alt="Spin-the-Wheel Event Thumbnail">
+                            </video>
+                            <h3>Scoop-n-Go Booth</h3>
+                            <div class="project-tags">
+                                <span class="tag-pm">Assistant Event Manager</span>
+                                <span class="tag-market">Marketing</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card"
+                            data-category="others"
+                            data-title="PSA Video"
+                            data-media="httpsAs-this-your-video.mp4"
+                            data-description="Served as the primary actor and narrator for a PSA video educating viewers on the dangers of oversharing personal information on social media."
+                            data-tags="Actor"
+                            data-details-page="project-psa-video.html">
                             <video muted loop playsinline
                                 poster="imgs/gamethumbs/avtthumb.PNG"
                                 src="is-this-your-video.mp4"
@@ -370,17 +408,17 @@
                             </video>
                             <h3>PSA Video</h3>
                                 <div class="project-tags">
-                                    <span class="tag-actor">Actor</span>
-                                </div>
+                                <span class="tag-actor">Actor</span>
                             </div>
+                        </div>
 
-                            <div class="project-card"
-                                data-category="others"
-                                data-title="Brochure"
-                                data-media="httpsAs-this-your-video.mp4"
-                                data-description="Served as the primary actor and narrator for a PSA video educating viewers on the dangers of oversharing personal information on social media."
-                                data-tags="Marketing"
-                                data-details-page="subpages/movie-brochure.html">
+                        <div class="project-card"
+                            data-category="others"
+                            data-title="Brochure"
+                            data-media="httpsAs-this-your-video.mp4"
+                            data-description="Designed a professional, print-ready movie brochure for Howl's Moving Castle using Adobe Photoshop."
+                            data-tags="Marketing"
+                            data-details-page="subpages/movie-brochure.html">
                             <video muted loop playsinline
                                 poster="imgs/gamethumbs/brochurethumb.PNG"
                                 src="is-this-your-video.mp4"
@@ -388,9 +426,65 @@
                             </video>
                             <h3>Movie Brochure</h3>
                                 <div class="project-tags">
-                                    <span class="tag-market">Designer</span>
-                                </div>
+                                <span class="tag-market">Designer</span>
                             </div>
+                        </div>
+
+                        <div class="project-card"
+                            data-category="others"
+                            data-title="Retail Customer Behavior Analysis"
+                            data-media="https://placehold.co/600x400/2a2a2a/d4d4d4?text=R+Analysis+Preview"
+                            data-description="Analyzed a large retail dataset using R, identifying correlations between customer payment methods and product ratings."
+                            data-tags="Data Analyst"
+                            data-details-page="project-retail-analysis.html">
+                            <video muted loop playsinline
+                                poster="imgs/gamethumbs/retailthumb.png"
+                                src="static/videos/retail-analysis-preview.mp4"
+                                alt="Retail Analysis Thumbnail">
+                            </video>
+                            <h3>Retail Customer Behavior Analysis</h3>
+                            <div class="project-tags">
+                                <span class="tag-data">Data Analyst</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card"
+                            data-category="others"
+                            data-title="Event Booking System UI/UX"
+                            data-media="https://placehold.co/600x400/2a2a2a/d4d4d4?text=Figma+Prototype"
+                            data-description="Designed a high-fidelity event booking app prototype in Figma, including full user journey from browsing to checkout."
+                            data-tags="UI/UX Designer"
+                            data-details-page="project-event-booking-ux.html">
+                            <video muted loop playsinline
+                                poster="imgs/gamethumbs/figmathumb.png"
+                                src="static/videos/figma-event-preview.mp4"
+                                alt="Event Booking UX Thumbnail">
+                            </video>
+                            <h3>Event Booking System UI/UX</h3>
+                            <div class="project-tags">
+                                <span class="tag-ux">UI/UX Designer</span>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card"
+                            data-category="others"
+                            data-title="2D Narrative Level"
+                            data-media="https://placehold.co/600x400/2a2a2a/d4d4d4?text=2D+Narrative+Preview"
+                            data-description="Designed a narrative-driven 2D Unity level focusing on environmental storytelling and emotional pacing."
+                            data-tags="Level Designer,Narrative Designer"
+                            data-details-page="project-narrative-level.html">
+                            <video muted loop playsinline
+                                poster="imgs/gamethumbs/narrativethumb.png"
+                                src="static/videos/narrative-level-preview.mp4"
+                                alt="Narrative Level Thumbnail">
+                            </video>
+                            <h3>2D Narrative Level</h3>
+                            <div class="project-tags">
+                                <span class="tag-design">Level Designer</span>
+                                <span class="tag-writing">Narrative Designer</span>
+                            </div>
+                        </div>
+
                     </div> <!-- /.project-grid -->
                 </div> <!-- /.window-content -->
             </div> <!-- /.window -->
@@ -407,10 +501,9 @@
         </div>
         <p>&copy; 2025 Hazim. All systems nominal.</p>
     </footer>
-
     </div>
 
-    <!-- project modal -->
+    <!--project modal --> 
     <!-- hidden with CSS (shared across all pages) -->
     <div id="project-modal" class="modal-overlay">
         <div class="window pixel-border" id="modal-window">
