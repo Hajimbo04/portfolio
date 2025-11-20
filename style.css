@@ -266,6 +266,15 @@ img, video {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+.carousel-header-wrapper a.projects-link {
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.2s; 
+}
+.carousel-header-wrapper a.projects-link:hover h2,
+.carousel-header-wrapper a.projects-link:hover {
+    color: var(--color-link-hover);
+}
 
 /* Project Card Sizing */
 .project-card {
