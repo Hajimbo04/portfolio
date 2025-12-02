@@ -223,7 +223,7 @@
     "description": "Managed the team and programmed core gameplay, including the enemy wave spawner, for a 2-week game jam.",
     "mediaSource": "static/videos/sugar-slasher-preview.mp4",
     "poster": "imgs/gamethumbs/sugarthumb.png",
-    "detailsPage": "project-sugar-slasher.html",
+    "detailsPage": "subpages/view.html?id=sugar-slasher",
     "tags": ["Project Manager", "Gameplay Programmer"]
   },
   {
@@ -233,7 +233,7 @@
     "description": "Created all characters, backgrounds, UI, and cutscene assets in Aseprite for a 5-person team.",
     "mediaSource": "static/videos/luggage-buds-preview.mp4",
     "poster": "imgs/gamethumbs/luggagethumb.png",
-    "detailsPage": "project-luggage-buds.html",
+    "detailsPage": "subpages/view.html?id=luggage-buds",
     "tags": ["Pixel Art Artist"]
   },
   {
@@ -243,8 +243,18 @@
     "description": "Designed all environmental tilemaps and UI icons for a 4-person team.",
     "mediaSource": "static/videos/seven-days-preview.mp4",
     "poster": "imgs/gamethumbs/seventhumb.png",
-    "detailsPage": "project-seven-days.html",
+    "detailsPage": "subpages/view.html?id=seven-days-feed",
     "tags": ["Pixel Art Artist"]
+  },
+  {
+    "id": "no-signal",
+    "category": "gamejam",
+    "title": "No Signal",
+    "description": "Designed the level",
+    "mediaSource": "static/videos/seven-days-preview.mp4",
+    "poster": "imgs/gamethumbs/nosignalthumb.png",
+    "detailsPage": "subpages/view.html?id=no-signal",
+    "tags": ["Level Designer"]
   },
   {
     "id": "quizzard",
