@@ -29,7 +29,7 @@ function createProjectCard(project) {
         data-tags="${dataTags}"
         data-details-page="${project.detailsPage}"
         ${itchAttribute}>
-        <video muted loop playsinline poster="${project.poster}" src="${project.mediaSource}"></video>
+        <video disablePictureInPicture muted loop playsinline poster="${project.poster}" src="${project.mediaSource}"></video>
         <h3>${project.title}</h3>
         <div class="project-tags">${tagsHtml}</div>
     </div>`;
@@ -208,7 +208,7 @@ function setupProjectInteractions() {
 
                 const mediaContainer = document.getElementById('modal-media');
                 if (mediaUrl.endsWith('.mp4') || mediaUrl.endsWith('.webm')) {
-                    mediaContainer.innerHTML = `<video controls autoplay muted loop playsinline src="${mediaUrl}"></video>`;
+                    mediaContainer.innerHTML = `<video disablePictureInPicture controls autoplay muted loop playsinline src="${mediaUrl}"></video>`;
                 } else {
                     mediaContainer.innerHTML = `<img src="${mediaUrl}">`;
                 }
