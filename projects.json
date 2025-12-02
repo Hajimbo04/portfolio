@@ -132,6 +132,7 @@
     "mediaSource": "static/videos/dungeon-escape-preview.mp4",
     "poster": "imgs/gamethumbs/dungeonthumb.PNG",
     "detailsPage": "subpages/view.html?id=dungeon-escape",
+    "itchUrl": "https://hajimbo.itch.io/elians-bloom",
     "tags": ["Game Designer", "Project Manager"],
     "detailedInfo": {
         "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Dungeon+Escape+Board",
