@@ -1,0 +1,232 @@
+[
+  {
+    "id": "gasing-guardian",
+    "category": "academic",
+    "title": "Gasing Guardian",
+    "description": "Built a physics-based grappling hook, player combat system, and enemy AI for a 3D platformer.",
+    "mediaSource": "imgs/gamevids/gg_vid.mp4",
+    "poster": "imgs/gamethumbs/gasingguardianthumb.png",
+    "detailsPage": "subpages/gasing-guardian.html",
+    "tags": ["Project Manager", "Gameplay Programmer"]
+  },
+  {
+    "id": "super-nasi-odyssey",
+    "category": "academic",
+    "title": "Super Nasi Odyssey",
+    "description": "Developed an 8-way character movement and a timeline-based cutscene system in Unreal Engine for a 2.5D adventure platformer.",
+    "mediaSource": "static/videos/nasi-odyssey-preview.mp4",
+    "poster": "imgs/gamethumbs/snothumb.png",
+    "detailsPage": "subpages/super-nasi-odyssey.html",
+    "tags": ["Project Manager", "Gameplay Programmer"]
+  },
+  {
+    "id": "seru-hooty",
+    "category": "academic",
+    "title": "Seru Hooty",
+    "description": "Programmed all core physics and timing-based puzzle mechanics for a 3D puzzle game using Unity.",
+    "mediaSource": "static/videos/seru-hooty-preview.mp4",
+    "poster": "imgs/gamethumbs/seruthumb.png",
+    "detailsPage": "project-seru-hooty.html",
+    "tags": ["Project Manager", "Gameplay Programmer"]
+  },
+  {
+    "id": "elians-bloom",
+    "category": "academic",
+    "title": "Elian's Bloom",
+    "description": "Coded all game logic and implemented visual special effects for a 2D game in Pygame.",
+    "mediaSource": "static/videos/elians-bloom-preview.mp4",
+    "poster": "imgs/gamethumbs/elianthumb.png",
+    "detailsPage": "project-elians-bloom.html",
+    "tags": ["Lead Programmer", "Level Designer"]
+  },
+  {
+    "id": "dungeon-escape",
+    "category": "academic",
+    "title": "Dungeon Escape (Board Game)",
+    "description": "Designed and balanced a 3-4 player survival horror board game with PvE/PvP mechanics.",
+    "mediaSource": "static/videos/dungeon-escape-preview.mp4",
+    "poster": "imgs/gamethumbs/dungeonthumb.PNG",
+    "detailsPage": "project-dungeon-escape.html",
+    "tags": ["Game Designer", "Project Manager"]
+  },
+  {
+    "id": "midnight-arcade",
+    "category": "academic",
+    "title": "Midnight Arcade Mayhem",
+    "description": "Programmed the core enemy AI (sleepwalking mum) and designed the house level layout for a comedic VR horror-arcade game.",
+    "mediaSource": "static/videos/dungeon-escape-preview.mp4",
+    "poster": "imgs/gamethumbs/mamthumb.png",
+    "detailsPage": "project-dungeon-escape.html",
+    "tags": ["Lead Developer", "VR"]
+  },
+  {
+    "id": "paper-adventure",
+    "category": "academic",
+    "title": "Paper Adventure",
+    "description": "Managed a team of 5, designed all puzzles, and wrote the game narrative based on a 2D-to-3D world-switching mechanic.",
+    "mediaSource": "static/videos/paper-adventure-preview.mp4",
+    "poster": "imgs/gamethumbs/paperthumb.png",
+    "detailsPage": "project-paper-adventure.html",
+    "tags": ["Project Manager", "Level Designer", "Puzzle Designer", "Writer"]
+  },
+  {
+    "id": "sugar-slasher",
+    "category": "gamejam",
+    "title": "Sugar Slasher",
+    "description": "Managed the team and programmed core gameplay, including the enemy wave spawner, for a 2-week game jam.",
+    "mediaSource": "static/videos/sugar-slasher-preview.mp4",
+    "poster": "imgs/gamethumbs/sugarthumb.png",
+    "detailsPage": "project-sugar-slasher.html",
+    "tags": ["Project Manager", "Gameplay Programmer"]
+  },
+  {
+    "id": "luggage-buds",
+    "category": "gamejam",
+    "title": "Luggage Buds (48-Hour Jam)",
+    "description": "Created all characters, backgrounds, UI, and cutscene assets in Aseprite for a 5-person team.",
+    "mediaSource": "static/videos/luggage-buds-preview.mp4",
+    "poster": "imgs/gamethumbs/luggagethumb.png",
+    "detailsPage": "project-luggage-buds.html",
+    "tags": ["Pixel Art Artist"]
+  },
+  {
+    "id": "seven-days-feed",
+    "category": "gamejam",
+    "title": "Seven Days to Feed (4-Day Jam)",
+    "description": "Designed all environmental tilemaps and UI icons for a 4-person team.",
+    "mediaSource": "static/videos/seven-days-preview.mp4",
+    "poster": "imgs/gamethumbs/seventhumb.png",
+    "detailsPage": "project-seven-days.html",
+    "tags": ["Pixel Art Artist"]
+  },
+  {
+    "id": "quizzard",
+    "category": "software",
+    "title": "Quizzard (Full-Stack Web App)",
+    "description": "Built a gamified e-learning RPG site using PHP, MySQL, and JavaScript, including a points/badges/leveling system.",
+    "mediaSource": "static/videos/quizzard-preview.mp4",
+    "poster": "imgs/gamethumbs/quizzardthumb.PNG",
+    "detailsPage": "project-quizzard.html",
+    "tags": ["Project Manager", "Backend Developer"]
+  },
+  {
+    "id": "hrm-system",
+    "category": "software",
+    "title": "HR Management System",
+    "description": "Built a Java SWING desktop app for managing employee records with Google GSON for database operations.",
+    "mediaSource": "static/videos/hrm-system-preview.mp4",
+    "poster": "imgs/gamethumbs/javathumb.PNG",
+    "detailsPage": "project-hrm-system.html",
+    "tags": ["Co-developer", "Java"]
+  },
+  {
+    "id": "laptop-repair",
+    "category": "software",
+    "title": "Service Management System",
+    "description": "Built a desktop laptop repair management system in Python with Tkinter, featuring 4 user roles and using CSV for data storage",
+    "mediaSource": "static/videos/hrm-system-preview.mp4",
+    "poster": "imgs/gamethumbs/pythumb.PNG",
+    "detailsPage": "project-hrm-system.html",
+    "tags": ["Co-developer", "Python"]
+  },
+  {
+    "id": "ajar-akademi",
+    "category": "software",
+    "title": "Ajar Akademi",
+    "description": "Developed a simple quiz web app with teacher and admin roles using PHP, MySQL, HTML, and JavaScript.",
+    "mediaSource": "static/videos/hrm-system-preview.mp4",
+    "poster": "imgs/gamethumbs/ajarthumb.PNG",
+    "detailsPage": "project-hrm-system.html",
+    "tags": ["Project Manager", "Backend Developer"]
+  },
+  {
+    "id": "cc1-event",
+    "category": "others",
+    "title": "CC1 Event",
+    "description": "Organized an online 'Stumble Guys' tournament for 44 participants; designed all marketing materials and served as the live event emcee.",
+    "mediaSource": "is-this-your-video.mp4",
+    "poster": "imgs/gamethumbs/cc1thumb.PNG",
+    "detailsPage": "project-cc1.html",
+    "tags": ["Event Manager", "Marketing"]
+  },
+  {
+    "id": "cc2-event",
+    "category": "others",
+    "title": "CC2 Event",
+    "description": "Managed a 14-person team to run a physical university game booth, directing all operations and exceeding fundraising goals by 33%.",
+    "mediaSource": "is-this-your-video.mp4",
+    "poster": "imgs/gamethumbs/cc2thumb.PNG",
+    "detailsPage": "project-cc2.html",
+    "tags": ["Event Manager", "Marketing"]
+  },
+  {
+    "id": "internship-talk",
+    "category": "others",
+    "title": "Samsung Internship Talk Event",
+    "description": "Led a 14-person team to plan and execute a professional internship talk with Samsung, overseeing marketing, PR, and event-day logistics.",
+    "mediaSource": "is-this-your-video.mp4",
+    "poster": "imgs/gamethumbs/samsungthumb.PNG",
+    "detailsPage": "project-intern-talk.html",
+    "tags": ["Event Manager"]
+  },
+  {
+    "id": "scoop-n-go",
+    "category": "others",
+    "title": "Scoop-n-Go Booth",
+    "description": "Assisted as project manager and marketing lead, designing posters and helping the team exceed the fundraising target by 100%.",
+    "mediaSource": "static/videos/spin-wheel-preview.mp4",
+    "poster": "imgs/gamethumbs/spinwheelthumb.png",
+    "detailsPage": "project-spin-wheel.html",
+    "tags": ["Assistant Event Manager", "Marketing"]
+  },
+  {
+    "id": "psa-video",
+    "category": "others",
+    "title": "PSA Video",
+    "description": "Served as the primary actor and narrator for a PSA video educating viewers on the dangers of oversharing personal information on social media.",
+    "mediaSource": "is-this-your-video.mp4",
+    "poster": "imgs/gamethumbs/avtthumb.PNG",
+    "detailsPage": "project-psa-video.html",
+    "tags": ["Actor"]
+  },
+  {
+    "id": "movie-brochure",
+    "category": "others",
+    "title": "Movie Brochure",
+    "description": "Designed a professional, print-ready movie brochure for Howl's Moving Castle using Adobe Photoshop.",
+    "mediaSource": "is-this-your-video.mp4",
+    "poster": "imgs/gamethumbs/brochurethumb.PNG",
+    "detailsPage": "subpages/movie-brochure.html",
+    "tags": ["Designer"]
+  },
+  {
+    "id": "retail-analysis",
+    "category": "others",
+    "title": "Retail Customer Behavior Analysis",
+    "description": "Analyzed a large retail dataset using R, identifying correlations between customer payment methods and product ratings.",
+    "mediaSource": "static/videos/retail-analysis-preview.mp4",
+    "poster": "imgs/gamethumbs/retailthumb.png",
+    "detailsPage": "project-retail-analysis.html",
+    "tags": ["Data Analyst"]
+  },
+  {
+    "id": "event-booking-ux",
+    "category": "others",
+    "title": "Event Booking System UI/UX",
+    "description": "Designed a high-fidelity event booking app prototype in Figma, including full user journey from browsing to checkout.",
+    "mediaSource": "static/videos/figma-event-preview.mp4",
+    "poster": "imgs/gamethumbs/figmathumb.png",
+    "detailsPage": "project-event-booking-ux.html",
+    "tags": ["UI/UX Designer"]
+  },
+  {
+    "id": "2d-level-design",
+    "category": "others",
+    "title": "2D Level Design",
+    "description": "Designed a narrative-driven 2D Unity level focusing on environmental storytelling and emotional pacing.",
+    "mediaSource": "static/videos/narrative-level-preview.mp4",
+    "poster": "imgs/gamethumbs/narrativethumb.png",
+    "detailsPage": "project-narrative-level.html",
+    "tags": ["Level Designer", "Narrative Designer"]
+  }
+]
