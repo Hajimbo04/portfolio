@@ -17,7 +17,7 @@
         "contributions": "<p>As the Project Manager, I led a team of 5, organizing sprints, managing tasks via Trello, and ensuring we met all our milestones.</p><p>As the lead Gameplay Programmer, my primary responsibilities included:</p><ul class='contribution-list'><li><strong>Physics-Based Grappling Hook:</strong> Engineered the core gasing mechanic from scratch.</li><li><strong>Player Combat System:</strong> Developed the state machine for player combat.</li><li><strong>Enemy AI:</strong> Programmed the basic AI for ground-based enemies.</li></ul>",
         "fastFacts": [
             { "label": "Role", "value": "Project Manager, Gameplay Programmer" },
-            { "label": "Tools", "value": "Unity, C#, Blender, Photoshop" },
+            { "label": "Tools", "value": "Unity, C#, Aseprite" },
             { "label": "Platform", "value": "PC (Windows)" },
             { "label": "Team Size", "value": "5" },
             { "label": "Duration", "value": "14 Weeks" }
@@ -48,7 +48,7 @@
         "contributions": "<p>As the Project Manager and Gameplay Programmer, I led a team of 4 to deliver this technical showcase.</p><ul class='contribution-list'><li><strong>Advanced Movement:</strong> Developed a responsive 8-way character movement system.</li><li><strong>Cutscene System:</strong> Implemented a timeline-based cutscene system for narrative delivery.</li><li><strong>Visual Effects:</strong> Created particle systems including running VFX to enhance game feel.</li><li><strong>Technical Implementation:</strong> Utilized the PaperZD plugin to integrate 2D sprite-based animation systems within a 3D Unreal Engine world.</li></ul>",
         "fastFacts": [
             { "label": "Role", "value": "Project Manager, Gameplay Programmer" },
-            { "label": "Tools", "value": "Unreal Engine, PaperZD" },
+            { "label": "Tools", "value": "Unreal Engine, C#, PaperZD" },
             { "label": "Platform", "value": "PC (Windows)" },
             { "label": "Team Size", "value": "4" },
             { "label": "Duration", "value": "14 Weeks" }
@@ -124,25 +124,66 @@
         ]
     }
   },
-  {
+{
     "id": "dungeon-escape",
     "category": "academic",
     "title": "Dungeon Escape (Board Game)",
     "description": "Designed and balanced a 3-4 player survival horror board game with PvE/PvP mechanics.",
     "mediaSource": "static/videos/dungeon-escape-preview.mp4",
     "poster": "imgs/gamethumbs/dungeonthumb.PNG",
-    "detailsPage": "project-dungeon-escape.html",
-    "tags": ["Game Designer", "Project Manager"]
+    "detailsPage": "subpages/view.html?id=dungeon-escape",
+    "tags": ["Game Designer", "Project Manager"],
+    "detailedInfo": {
+        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Dungeon+Escape+Board",
+        "windowTitle": "[ dungeon_escape.pdf ]",
+        "overview": "<p>Dungeon Escape is a competitive, turn-based survival horror board game for 3-4 players. Players must navigate a dangerous 25x25 grid maze, roll dice to move, and race to find one of two hidden keys to escape.</p><p>The twist? A minotaur hunts the players down, advancing after every turn. Players must balance speed and risk, deciding whether to sabotage their friends or focus on their own survival while avoiding traps and the ever-encroaching beast.</p>",
+        "contributions": "<p>My primary contributions were in game design and quality assurance.</p><ul class='contribution-list'><li><strong>Game Design & Balancing:</strong> Designed the card content and wrote the comprehensive rulesheet to ensure clarity and fairness.</li><li><strong>QA Testing:</strong> Conducted playtests to balance the PvE and PvP mechanics, ensuring the 'Minotaur' threat felt fair but formidable.</li><li><strong>Visuals:</strong> Assisted with asset creation using Photoshop and Canva.</li></ul>",
+        "fastFacts": [
+            { "label": "Role", "value": "Game Designer, Rules Writer" },
+            { "label": "Tools", "value": "Photoshop, Canva" },
+            { "label": "Platform", "value": "Physical Board Game" },
+            { "label": "Team Size", "value": "5" },
+            { "label": "Duration", "value": "14 Weeks" }
+        ],
+        "playLink": "",
+        "gallery": [
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Board+Setup",
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Card+Designs",
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Minotaur+Piece",
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Gameplay+Session"
+        ]
+    }
   },
   {
     "id": "midnight-arcade",
     "category": "academic",
-    "title": "Midnight Arcade Mayhem",
+    "title": "Midnight Arcade Mayhem (VR)",
     "description": "Programmed the core enemy AI (sleepwalking mum) and designed the house level layout for a comedic VR horror-arcade game.",
-    "mediaSource": "static/videos/dungeon-escape-preview.mp4",
+    "mediaSource": "static/videos/midnight-arcade-preview.mp4",
     "poster": "imgs/gamethumbs/mamthumb.png",
-    "detailsPage": "project-dungeon-escape.html",
-    "tags": ["Lead Developer", "VR"]
+    "detailsPage": "subpages/view.html?id=midnight-arcade",
+    "itchUrl": "https://hajimbo.itch.io/midnight-arcade-mayhem",
+    "tags": ["Lead Developer", "VR"],
+    "detailedInfo": {
+        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Midnight+Arcade+VR",
+        "windowTitle": "[ midnight_arcade.exe ]",
+        "overview": "<p>Midnight Arcade Mayhem plunges you into the shoes of a young boy on a mission to play all four hidden arcade minigames before 6 AM—without waking up your sleepwalking mother.</p><p>Built for the Meta Quest 2, this VR experience blends stealth, arcade, and horror genres. You must use environmental awareness to tip-toe through hallways, duck behind furniture, and evade the terrifying gaze of Mom.</p>",
+        "contributions": "<p>I focused on the level design and enemy AI implementation for VR.</p><ul class='contribution-list'><li><strong>Level Design:</strong> Designed the house layout using low-poly models optimized for VR performance on the Quest 2.</li><li><strong>AI Programming:</strong> Implemented the 'Sleepwalking Mum' AI using Unity's NavMesh system with random patrol paths.</li><li><strong>VR Integration:</strong> Ensured smooth locomotion and interaction mechanics within the VR environment.</li></ul>",
+        "fastFacts": [
+            { "label": "Role", "value": "Level Designer, AI Programmer" },
+            { "label": "Tools", "value": "Unity, C#, Meta Quest 2" },
+            { "label": "Platform", "value": "VR (Oculus/Meta)" },
+            { "label": "Team Size", "value": "5" },
+            { "label": "Duration", "value": "5 Weeks" }
+        ],
+        "playLink": "https://hajimbo.itch.io/midnight-arcade-mayhem",
+        "gallery": [
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=VR+Gameplay",
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Sleepwalking+Mom",
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Arcade+MiniGame",
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=House+Layout"
+        ]
+    }
   },
   {
     "id": "paper-adventure",
@@ -151,8 +192,28 @@
     "description": "Managed a team of 5, designed all puzzles, and wrote the game narrative based on a 2D-to-3D world-switching mechanic.",
     "mediaSource": "static/videos/paper-adventure-preview.mp4",
     "poster": "imgs/gamethumbs/paperthumb.png",
-    "detailsPage": "project-paper-adventure.html",
-    "tags": ["Level Designer", "Puzzle Designer"]
+    "detailsPage": "subpages/view.html?id=paper-adventure",
+    "tags": ["Level Designer", "Puzzle Designer"],
+    "detailedInfo": {
+        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Page+of+Peril+Hero",
+        "windowTitle": "[ page_of_peril.exe ]",
+        "overview": "<p>Page of Peril is a narrative-driven puzzle-platformer set within a child’s notebook. You play as 'Sketch', a stickman entity who gains sentience and tries to escape the drawing world.</p><p>The core mechanic involves a dimension-shifting ability. Players can toggle between a 2D Orthographic view and a 3D Perspective view to reveal hidden paths, bypass 'impassable' 2D obstacles, and manage their 'Ink' stamina.</p>",
+        "contributions": "<p>I served as the Project Manager and Lead Designer.</p><ul class='contribution-list'><li><strong>Project Management:</strong> Managed a team of 5 over 12 weeks to deliver the project using Unity 6.</li><li><strong>Puzzle Design:</strong> Designed the environmental puzzles that require switching between 2D and 3D perspectives.</li><li><strong>Narrative Writing:</strong> Wrote the game narrative centered around Sketch's fight for freedom.</li></ul>",
+        "fastFacts": [
+            { "label": "Role", "value": "Project Manager, Puzzle Designer" },
+            { "label": "Tools", "value": "Unity, Photoshop, Aseprite" },
+            { "label": "Platform", "value": "PC (Web/Browser)" },
+            { "label": "Team Size", "value": "5" },
+            { "label": "Duration", "value": "12 Weeks" }
+        ],
+        "playLink": "",
+        "gallery": [
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=2D+View",
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=3D+Perspective+Shift",
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Sketch+Character",
+            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Puzzle+Design"
+        ]
+    }
   },
   {
     "id": "sugar-slasher",
