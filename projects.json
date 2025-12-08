@@ -29,7 +29,20 @@
             "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Enemy+Combat",
             "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Level+Design"
         ]
+    },
+    "roleDetails": [
+    {
+      "role": "Level Design",
+      "windowTitle": "[ level_design_docs.pdf ]",
+      "content": "<h3>Philosophy</h3><p>I designed the levels to teach mechanics without tutorials...</p><img src='path/to/level_layout.jpg'><p>The pacing follows a 4-step structure...</p>"
+    },
+    {
+      "role": "Project Management",
+      "windowTitle": "[ jira_sprints.xlsx ]",
+      "content": "<h3>Sprint Velocity</h3><p>Managed a team of 5 using Agile...</p><ul><li>Sprint 1: Core Mechanics</li><li>Sprint 2: AI</li></ul>"
     }
+  ]
+    
   },
   {
     "id": "super-nasi-odyssey",

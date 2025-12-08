@@ -1,3 +1,4 @@
+let highestZ = 100;
 // functions for project generations
 function getTagClass(tag) {
     const t = tag.toLowerCase();
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!gridContainer && !detailTitle) {
         setupProjectInteractions();
     }
+    setTimeout(applyUrlPreferences, 100);
 });
 
 function loadProjectsGrid(container) {
@@ -97,12 +99,11 @@ function loadProjectDetails() {
         });
 }
 
+let currentProjectRoleDetails = []; 
+
 function injectProjectData(project) {
     const info = project.detailedInfo;
-    if (!info) {
-        document.getElementById('loading-message').textContent = "[ Error: Detailed info missing for this project ]";
-        return;
-    }
+    if (!info) return;
 
     document.title = `Hazim's Portfolio - ${project.title}`;
     document.getElementById('detail-window-title').textContent = info.windowTitle || `[ ${project.id}.exe ]`;
@@ -129,19 +130,30 @@ function injectProjectData(project) {
         playLink.style.display = 'none';
     }
 
+    const roleContainer = document.getElementById('role-buttons-container');
+    
+    if (project.roleDetails && project.roleDetails.length > 0) {
+        currentProjectRoleDetails = project.roleDetails; // Store for access
+        
+        roleContainer.style.display = 'flex';
+        roleContainer.innerHTML = project.roleDetails.map((role, index) => `
+            <button class="btn-role-window" onclick="openRoleWindow(${index})">
+                [ Open ${role.role} Data ]
+            </button>
+        `).join('');
+    } else {
+        roleContainer.style.display = 'none';
+    }
+
     if (info.gallery && info.gallery.length > 0) {
         const mainDisplay = document.getElementById('gallery-main-display');
         const thumbsContainer = document.getElementById('detail-gallery-thumbs');
         
         mainDisplay.src = info.gallery[0];
-
         thumbsContainer.innerHTML = info.gallery.map((src, index) => `
             <img class="gallery-thumb pixel-border ${index === 0 ? 'active' : ''}" 
-                 src="${src}" 
-                 data-src="${src}" 
-                 alt="Gallery Image ${index + 1}">
+                 src="${src}" data-src="${src}">
         `).join('');
-
         initGallery(); 
     } else {
         document.querySelector('.project-gallery-window').style.display = 'none';
@@ -155,7 +167,34 @@ function injectProjectData(project) {
     }
 }
 
-// interactive features
+function openRoleWindow(index) {
+    const data = currentProjectRoleDetails[index];
+    const windowEl = document.getElementById('role-detail-window');
+    
+    if (data && windowEl) {
+        document.getElementById('role-window-title').textContent = data.windowTitle || `[ ${data.role}.txt ]`;
+        document.getElementById('role-window-content').innerHTML = `
+            <h2 style="color: var(--color-accent); margin-top:0;">${data.role} Report</h2>
+            <hr style="border: 1px solid var(--color-border); margin-bottom: 20px;">
+            ${data.content}
+        `;
+
+        highestZ++;
+        windowEl.style.zIndex = highestZ;
+
+        windowEl.style.display = 'flex';
+        windowEl.style.transform = 'none'; 
+        windowEl.setAttribute('data-x', 0); 
+        windowEl.setAttribute('data-y', 0); 
+
+        document.getElementById('role-window-close').onclick = function() {
+            windowEl.style.display = 'none';
+        };
+
+        initDraggableWindows();
+    }
+}
+
 function setupProjectInteractions() {
     const allProjectCards = document.querySelectorAll('.project-card');
     let hoverTimer = null; 
@@ -178,7 +217,6 @@ function setupProjectInteractions() {
         });
     });
 
-    // Modal Logic
     const modal = document.getElementById('project-modal');
     const modalCloseBtn = document.getElementById('modal-close');
     
@@ -306,16 +344,20 @@ function initParticles() {
 
 function initDraggableWindows() {
     const allWindows = document.querySelectorAll('main .window');
-    let highestZ = 10; 
     
     allWindows.forEach(windowEl => {
         const titleBar = windowEl.querySelector('.window-titlebar');
         if (!titleBar) return;
         
-        windowEl.style.position = 'relative'; 
+        if (windowEl.classList.contains('js-drag-enabled')) return;
+        windowEl.classList.add('js-drag-enabled');
+
+        if (!windowEl.classList.contains('draggable-role-window')) {
+            windowEl.style.position = 'relative'; 
+        }
+
         windowEl.style.zIndex = highestZ;
         let isDragging = false;
-        let xOffset = 0, yOffset = 0;
         let initialMouseX, initialMouseY;
 
         windowEl.addEventListener('mousedown', () => {
@@ -338,7 +380,11 @@ function initDraggableWindows() {
             if (!isDragging) return;
             const dx = e.clientX - initialMouseX;
             const dy = e.clientY - initialMouseY;
-            windowEl.style.transform = `translate(${xOffset + dx}px, ${yOffset + dy}px)`;
+            
+            const currentX = parseFloat(windowEl.getAttribute('data-x')) || 0;
+            const currentY = parseFloat(windowEl.getAttribute('data-y')) || 0;
+
+            windowEl.style.transform = `translate(${currentX + dx}px, ${currentY + dy}px)`;
         }
 
         function dragEnd(e) {
@@ -348,17 +394,23 @@ function initDraggableWindows() {
             document.removeEventListener('mouseup', dragEnd);
             titleBar.style.cursor = 'grab';
             document.body.style.cursor = 'default';
-            xOffset = xOffset + (e.clientX - initialMouseX);
-            yOffset = yOffset + (e.clientY - initialMouseY);
+            
+            const currentX = parseFloat(windowEl.getAttribute('data-x')) || 0;
+            const currentY = parseFloat(windowEl.getAttribute('data-y')) || 0;
+            
+            const newX = currentX + (e.clientX - initialMouseX);
+            const newY = currentY + (e.clientY - initialMouseY);
+
+            windowEl.setAttribute('data-x', newX);
+            windowEl.setAttribute('data-y', newY);
+            windowEl.style.transform = `translate(${newX}px, ${newY}px)`;
         }
 
         const resizeHandle = windowEl.querySelector('.resize-handle');
-        const minWidth = 300;
-        const minHeight = 250;
-        let isResizing = false;
-        let initialWidth, initialHeight;
-        
         if (resizeHandle) {
+            let isResizing = false;
+            let initialWidth, initialHeight;
+
             resizeHandle.addEventListener('mousedown', (e) => {
                 e.preventDefault();
                 e.stopPropagation(); 
@@ -378,8 +430,8 @@ function initDraggableWindows() {
                 const dy = e.clientY - initialMouseY;
                 let newWidth = initialWidth + dx;
                 let newHeight = initialHeight + dy;
-                if (newWidth < minWidth) newWidth = minWidth;
-                if (newHeight < minHeight) newHeight = minHeight;
+                if (newWidth < 300) newWidth = 300;
+                if (newHeight < 250) newHeight = 250;
                 windowEl.style.width = newWidth + 'px';
                 windowEl.style.height = newHeight + 'px';
             }
@@ -418,6 +470,8 @@ function initThemeToggle() {
 
 function initCarousel() {
     const carouselContainer = document.querySelector('.all-projects-carousel .carousel-container');
+    const headerWrapper = document.querySelector('.carousel-header-wrapper');
+    
     if (carouselContainer) {
         const track = carouselContainer.querySelector('.carousel-track');
         const prevBtn = document.getElementById('carousel-prev');
@@ -425,39 +479,63 @@ function initCarousel() {
         if (!track || !prevBtn || !nextBtn) return;
 
         let cards = Array.from(track.children);
+        if (cards.length === 0) return; 
+
         let cardWidth = 0;
-        let visibleSlides = 1;
         let currentIndex = 0;
 
         const updateCarouselSizing = () => {
             const containerWidth = carouselContainer.getBoundingClientRect().width;
             const firstCard = cards[0];
-            if (!firstCard) return; 
+            if (!firstCard) return;
+            
             const cardStyle = window.getComputedStyle(firstCard);
-            const cardMarginWidth = parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight);
-            cardWidth = firstCard.getBoundingClientRect().width + cardMarginWidth;
-            visibleSlides = Math.floor(containerWidth / cardWidth);
-            if (visibleSlides < 1) visibleSlides = 1; 
+            const cardMargin = parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight);
+            cardWidth = firstCard.getBoundingClientRect().width + cardMargin;
+    
+            const totalContentWidth = cardWidth * cards.length;
+
+            if (totalContentWidth <= containerWidth + 5) {
+                track.classList.add('center-content');
+                if(headerWrapper) headerWrapper.classList.add('hide-nav');
+                track.style.transform = 'translateX(0px)';
+            } 
+            else {
+                track.classList.remove('center-content');
+                if(headerWrapper) headerWrapper.classList.remove('hide-nav');
+            }
         };
 
         const moveToSlide = (targetIndex) => {
+            if (track.classList.contains('center-content')) return;
+
+            const containerWidth = carouselContainer.getBoundingClientRect().width;
+            const visibleSlides = Math.floor(containerWidth / cardWidth);
+
             if (targetIndex < 0) targetIndex = 0;
             if (targetIndex > cards.length - visibleSlides) targetIndex = cards.length - visibleSlides;
-            if (targetIndex < 0) targetIndex = 0;
+            
             track.style.transform = 'translateX(-' + (cardWidth * targetIndex) + 'px)';
             currentIndex = targetIndex;
         };
 
-        updateCarouselSizing();
-        moveToSlide(0);
+        const newPrev = prevBtn.cloneNode(true);
+        const newNext = nextBtn.cloneNode(true);
+        prevBtn.parentNode.replaceChild(newPrev, prevBtn);
+        nextBtn.parentNode.replaceChild(newNext, nextBtn);
 
-        nextBtn.addEventListener('click', () => moveToSlide(currentIndex + 1));
-        prevBtn.addEventListener('click', () => moveToSlide(currentIndex - 1));
+        newNext.addEventListener('click', () => moveToSlide(currentIndex + 1));
+        newPrev.addEventListener('click', () => moveToSlide(currentIndex - 1));
         
         window.addEventListener('resize', () => {
             updateCarouselSizing();
             moveToSlide(currentIndex);
         });
+
+        setTimeout(() => {
+            updateCarouselSizing();
+            moveToSlide(0);
+        }, 50);
     }
 }
 
@@ -481,4 +559,252 @@ function initGallery() {
             mainDisplay.src = thumbnails[0].getAttribute('data-src');
         }
     } 
+}
+
+function applyUrlPreferences() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const roleParam = urlParams.get('role'); 
+    const filterParam = urlParams.get('filter'); 
+
+    if (filterParam) {
+        const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterParam}"]`);
+        setTimeout(() => { if (targetBtn) targetBtn.click(); }, 100);
+    }
+
+    if (roleParam) {
+        const profileRole = document.getElementById('profile-role');
+        const profileCore = document.getElementById('profile-core-skills');
+        const skillsContainer = document.getElementById('skills-container');
+
+        if (profileRole && profileCore && skillsContainer) {
+            let roleDescription = "";
+            let coreSkillsList = "";
+            let skillsHTML = "";
+
+            if (roleParam === 'software') {
+                roleDescription = "";
+                coreSkillsList = "";
+                
+                skillsHTML = `
+                    <div class="skill-list-container">
+                        <h4>[ Core Competencies ]</h4>
+                        <ul>
+                            <li>Object-Oriented Programming (OOP)</li>
+                            <li>Database Design & Normalization</li>
+                            <li>Backend Architecture (MVC)</li>
+                            <li>Agile / Scrum Management</li>
+                        </ul>
+                    </div>
+                    <div class="skill-list-container">
+                        <h4>[ Languages ]</h4>
+                        <ul>
+                            <li>Python <span class="primary">(Advanced)</span></li>
+                            <li>Java <span class="primary">(Intermediate)</span></li>
+                            <li>PHP & SQL</li>
+                            <li>HTML / CSS / JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="skill-list-container">
+                        <h4>[ Frameworks & Tools ]</h4>
+                        <ul>
+                            <li>Java Swing / GSON</li>
+                            <li>Pygame / CustomTkinter</li>
+                            <li>Git / GitHub</li>
+                            <li>VS Code / IntelliJ / XAMPP</li>
+                        </ul>
+                    </div>`;
+            } 
+            else if (roleParam === 'data') { 
+                roleDescription = "";
+                coreSkillsList = "";
+                
+                skillsHTML = `
+                    <div class="skill-list-container">
+                        <h4>[ Analysis Competencies ]</h4>
+                        <ul>
+                            <li>Statistical Modeling (Regression)</li>
+                            <li>Hypothesis Testing</li>
+                            <li>Data Cleaning & Wrangling</li>
+                            <li>Exploratory Data Analysis (EDA)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-list-container">
+                        <h4>[ Languages & Libraries ]</h4>
+                        <ul>
+                            <li>R <span class="primary">(Tidyverse, ggplot2)</span></li>
+                            <li>Python <span class="primary">(Pandas, Matplotlib)</span></li>
+                            <li>SQL <span class="primary">(MySQL)</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-list-container">
+                        <h4>[ Tools ]</h4>
+                        <ul>
+                            <li>RStudio</li>
+                            <li>Jupyter Notebooks</li>
+                            <li>Excel (Pivot Tables)</li>
+                            <li>Tableau (Basics)</li>
+                        </ul>
+                    </div>`;
+            }
+            else if (roleParam === 'gamedev') { 
+                roleDescription = ".";
+                coreSkillsList = "";
+                
+                skillsHTML = `
+                    <div class="skill-list-container">
+                        <h4>[ Core Competencies ]</h4>
+                        <ul>
+                            <li>Gameplay Programming</li>
+                            <li>3D & 2D Level Design</li>
+                            <li>Game Feel & Polish</li>
+                            <li>Rapid Prototyping</li>
+                        </ul>
+                    </div>
+                    <div class="skill-list-container">
+                        <h4>[ Engines ]</h4>
+                        <ul>
+                            <li>Unity <span class="primary">(Unity 6, 2022 LTS)</span></li>
+                            <li>Unreal Engine 5 <span class="primary">(Blueprints, C++)</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-list-container">
+                        <h4>[ Languages ]</h4>
+                        <ul>
+                            <li>C# <span class="primary">(Primary)</span></li>
+                            <li>C++</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <div class="skill-list-container">
+                        <h4>[ Creative Tools ]</h4>
+                        <ul>
+                            <li>Blender</li>
+                            <li>Aseprite</li>
+                            <li>Photoshop</li>
+                        </ul>
+                    </div>`;
+            }
+
+            if (roleDescription) profileRole.textContent = roleDescription;
+            if (coreSkillsList) profileCore.textContent = coreSkillsList;
+            if (skillsHTML) skillsContainer.innerHTML = skillsHTML;
+        }
+
+        let newTitle = "";
+        let newWindowName = "";
+        let targetFilter = "all"; 
+        let newFocus = "";
+        let newSpecialty = "";
+        let newTools = "";
+
+        switch(roleParam) {
+            case 'software':
+                newTitle = "I'm a <span style='color: var(--color-accent)'>Software Engineer</span> | Python, Java, PHP, SQL & Full-Stack Development";
+                newWindowName = "[ software_engineer.txt ]";
+                targetFilter = "software"; 
+                newFocus = `I build robust, user-centric software solutions. I specialize in <span style="color: #00ff00;">Backend Development</span> and <span style="color: #00ff00;">Database Management</span>, utilizing Python, Java, and SQL to create efficient applications.`;
+                newSpecialty = `Translating complex business requirements into clean, maintainable code for desktop and web environments.`;
+                newTools = `[ "Python", "Java", "PHP", "MySQL", "HTML/CSS", "JavaScript", "Git", "CustomTkinter" ]`;
+                break;
+            
+            case 'gamedev':
+                newTitle = "I'm a <span style='color: var(--color-accent)'>Gameplay Programmer</span> | Unity (C#), Unreal (C++) & Technical Design";
+                newWindowName = "[ gameplay_prog.cpp ]";
+                targetFilter = "academic"; 
+                newFocus = `I bring worlds to life through code. I specialize in <span style="color: #00ff00;">Gameplay Systems</span>, <span style="color: #00ff00;">Character Mechanics</span>, and <span style="color: #00ff00;">AI Behavior</span> using Unity and Unreal Engine.`;
+                newSpecialty = `Bridging the gap between Game Design and Engineering to create responsive, "juicy", and bug-free gameplay experiences.`;
+                newTools = `[ "Unity (C#)", "Unreal (Blueprints/C++)", "Blender", "Aseprite", "PlasticSCM", "Jira" ]`;
+                break;
+
+            case 'data':
+                newTitle = "I'm a <span style='color: var(--color-accent)'>Data Analyst</span> | R, Python, Visualization & Statistical Modeling";
+                newWindowName = "[ data_analysis.R ]";
+                targetFilter = "others"; 
+                newFocus = `I turn raw numbers into actionable insights. I specialize in <span style="color: #00ff00;">Statistical Analysis</span> and <span style="color: #00ff00;">Data Visualization</span> to uncover trends in user behavior and market data.`;
+                newSpecialty = `Using data science methodologies (Logistic Regression, Hypothesis Testing) to solve real-world problems.`;
+                newTools = `[ "RStudio", "Python (Pandas, Matplotlib)", "SQL", "Excel", "Tableau" ]`;
+                break;
+        }
+
+        const heroSubtitle = document.querySelector('.hero-section h2');
+        const heroWindowName = document.querySelector('.hero-section .window-titlebar span');
+        const aboutFocus = document.getElementById('about-focus');
+        const aboutSpecialty = document.getElementById('about-specialty');
+        const aboutTools = document.getElementById('about-tools');
+
+        if (heroSubtitle && newTitle) heroSubtitle.innerHTML = newTitle;
+        if (heroWindowName && newWindowName) heroWindowName.textContent = newWindowName;
+        if (aboutFocus && newFocus) aboutFocus.innerHTML = newFocus;
+        if (aboutSpecialty && newSpecialty) aboutSpecialty.innerHTML = newSpecialty;
+        if (aboutTools && newTools) aboutTools.textContent = newTools;
+
+        updateNavLinks(roleParam, targetFilter);
+    }
+
+    if (roleParam) {
+        loadHomeCarousel(roleParam);
+    } else {
+        loadHomeCarousel('default');
+    }
+}
+
+function updateNavLinks(role, filter) {
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        if (!href || href.startsWith('http')) return;
+
+        if (href.includes('index.html')) {
+            link.href = `index.html?role=${role}`;
+        } 
+        else if (href.includes('about.html')) {
+            link.href = `about.html?role=${role}`;
+        }
+        else if (href.includes('projects.html')) {
+            link.href = `projects.html?filter=${filter}&role=${role}`;
+        }
+        else if (href.includes('contact.html')) {
+            link.href = `contact.html?role=${role}`;
+        }
+    });
+
+    const carouselLink = document.querySelector('.projects-link');
+    if (carouselLink) {
+        carouselLink.setAttribute('href', `projects.html?filter=${filter}&role=${role}`);
+    }
+}
+
+function loadHomeCarousel(role) {
+    const track = document.querySelector('.carousel-track');
+    if (!track) return;
+
+    fetch('projects.json')
+        .then(response => response.json())
+        .then(projects => {
+            let filteredProjects = [];
+
+            if (role === 'software') {
+                filteredProjects = projects.filter(p => p.category === 'software' || p.tags.includes('Python'));
+            } 
+            else if (role === 'gamedev') {
+                filteredProjects = projects.filter(p => p.category === 'academic' || p.category === 'gamejam');
+            } 
+            else if (role === 'data') {
+                filteredProjects = projects.filter(p => p.id === 'retail-analysis' || p.tags.includes('Data Analyst'));
+            } 
+            else {
+                const featuredIds = ['gasing-guardian', 'super-nasi-odyssey', 'retail-analysis', 'quizzard', 'midnight-arcade'];
+                filteredProjects = projects.filter(p => featuredIds.includes(p.id));
+                
+                if (filteredProjects.length === 0) filteredProjects = projects.slice(0, 6);
+            }
+
+            track.innerHTML = filteredProjects.map(createProjectCard).join('');
+
+            setupProjectInteractions(); 
+            initCarousel(); 
+        })
+        .catch(err => console.error('Error loading carousel:', err));
 }

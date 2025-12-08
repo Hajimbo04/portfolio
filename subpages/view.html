@@ -47,8 +47,12 @@
                     <div class="window-content">
                         <img id="detail-hero-image" src="" alt="Project Hero" class="project-hero-image pixel-border">                
                         <h1 id="detail-title">Project Title</h1>
-                        <div class="project-tags" id="detail-tags">
+                        
+                        <div class="project-tags" id="detail-tags"></div>
+
+                        <div id="role-buttons-container" class="role-buttons-row">
                         </div>
+
                         <div class="project-detail-layout">                            
                             <div class="project-description">
                                 <h2>Project Overview</h2>
@@ -104,6 +108,20 @@
                 </div>
             </div>
         </div>
+
+        <div id="role-detail-window" class="window pixel-border draggable-role-window" style="display: none;">
+            <div class="window-titlebar">
+                <span id="role-window-title">[ role_data.txt ]</span>
+                <div class="window-buttons">
+                    <button id="role-window-close" class="window-btn">X</button>
+                </div>
+            </div>
+            <div class="window-content" id="role-window-content">
+                <!-- Specific role content injected here -->
+            </div>
+            <div class="resize-handle"></div>
+        </div>
+
     </main>
 
     <footer class="main-footer">
