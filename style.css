@@ -770,9 +770,6 @@ img, video {
     display: none;
 }
 
-/* --- NEW STYLES FOR ROLE WINDOWS --- */
-
-/* The container for the buttons */
 .role-buttons-row {
     display: flex;
     flex-wrap: wrap;
@@ -783,7 +780,6 @@ img, video {
     border: 2px dashed var(--color-border);
 }
 
-/* The individual buttons */
 .btn-role-window {
     display: inline-flex;
     align-items: center;
@@ -804,28 +800,25 @@ img, video {
     color: var(--color-accent);
 }
 
-/* The Popup Window itself */
 #role-detail-window {
-    position: fixed !important; /* Force fixed so it floats over everything */
-    inset: 0; /* Shorthand for top:0; right:0; bottom:0; left:0; */
-    margin: auto; /* This automatically centers the fixed element */
+    position: fixed !important; 
+    inset: 0; 
+    margin: auto; 
     
     width: 80%;
     max-width: 800px;
     height: 70vh;
-    z-index: 9999; /* Highest priority */
+    z-index: 9999; 
     box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
     background-color: var(--color-window-bg);
 }
 
-/* Ensure images inside the role window fit */
 #role-window-content img {
     max-width: 100%;
     border: 2px solid var(--color-border);
     margin: 10px 0;
 }
 
-/* Mobile check */
 @media (max-width: 768px) {
     #role-detail-window {
         width: 95%;

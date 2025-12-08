@@ -3,7 +3,7 @@
     "id": "gasing-guardian",
     "category": "academic",
     "title": "Gasing Guardian",
-    "description": "Built a physics-based grappling hook, player combat system, and enemy AI for a 3D platformer.",
+    "description": "Built a physics-based grappling hook, player combat system, and enemy AI for a 2D platformer.",
     "mediaSource": "imgs/gamevids/gg_vid.mp4",
     "poster": "imgs/gamethumbs/gasingguardianthumb.png",
     "detailsPage": "subpages/view.html?id=gasing-guardian", 
@@ -11,7 +11,7 @@
     "tags": ["Project Manager", "Gameplay Programmer"],
     
     "detailedInfo": {
-        "heroImage": "../imgs/gamethumbs/gasingguardianthumb.png",
+        "heroImage": "../imgs/gamethumbs/gg/gg2.PNG",
         "windowTitle": "[ gasing_guardian.exe ]",
         "overview": "<p>Gasing Guardian is a 2D physics-based platformer created in Unity. The game blends traditional Malaysian culture with fast-paced, modern gameplay. Players control a hero armed with a 'gasing' (a traditional top) which functions as a versatile grappling hook, combat weapon, and puzzle-solving tool.</p>",
         "contributions": "<p>As the Project Manager, I led a team of 5, organizing sprints, managing tasks via Trello, and ensuring we met all our milestones.</p><p>As the lead Gameplay Programmer, my primary responsibilities included:</p><ul class='contribution-list'><li><strong>Physics-Based Grappling Hook:</strong> Engineered the core gasing mechanic from scratch.</li><li><strong>Player Combat System:</strong> Developed the state machine for player combat.</li><li><strong>Enemy AI:</strong> Programmed the basic AI for ground-based enemies.</li></ul>",
@@ -24,22 +24,22 @@
         ],
         "playLink": "https://hajimbo.itch.io/gasing-guardian",
         "gallery": [
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Gameplay+1",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Grappling+Action",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Enemy+Combat",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Level+Design"
+            "../imgs/gamethumbs/gg/gg3.PNG",
+            "../imgs/gamethumbs/gg/gg1.PNG",
+            "../imgs/gamethumbs/gg/gg4.PNG",
+            "../imgs/gamethumbs/gg/gg5.PNG"
         ]
     },
     "roleDetails": [
     {
       "role": "Level Design",
       "windowTitle": "[ level_design_docs.pdf ]",
-      "content": "<h3>Philosophy</h3><p>I designed the levels to teach mechanics without tutorials...</p><img src='path/to/level_layout.jpg'><p>The pacing follows a 4-step structure...</p>"
+      "content": "<h3>Philosophy</h3><p>Work in progress</p>"
     },
     {
       "role": "Project Management",
       "windowTitle": "[ jira_sprints.xlsx ]",
-      "content": "<h3>Sprint Velocity</h3><p>Managed a team of 5 using Agile...</p><ul><li>Sprint 1: Core Mechanics</li><li>Sprint 2: AI</li></ul>"
+      "content": "<h3>Sprint Velocity</h3><p>Work in progress</p>"
     }
   ]
     
@@ -55,7 +55,7 @@
     "itchUrl": "https://hajimbo.itch.io/super-nasi-odyssey",
     "tags": ["Project Manager", "Gameplay Programmer"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Super+Nasi+Odyssey",
+        "heroImage": "../imgs/gamethumbs/sno/sno5.PNG",
         "windowTitle": "[ super_nasi.exe ]",
         "overview": "<p>Aish learns a hard lesson about wasting food when she's cursed by a mysterious wizard! Now trapped in a 2D pixel-art form, she must leap across strange and dangerous multiverses to collect enough food to break the curse.</p><p>Super Nasi Odyssey is a fast-paced 2.5D precision platformer where every second counts. Test your reflexes, solve environmental puzzles, and master Aish's abilities to navigate two challenging levels.</p>",
         "contributions": "<p>As the Project Manager and Gameplay Programmer, I led a team of 4 to deliver this technical showcase.</p><ul class='contribution-list'><li><strong>Advanced Movement:</strong> Developed a responsive 8-way character movement system.</li><li><strong>Cutscene System:</strong> Implemented a timeline-based cutscene system for narrative delivery.</li><li><strong>Visual Effects:</strong> Created particle systems including running VFX to enhance game feel.</li><li><strong>Technical Implementation:</strong> Utilized the PaperZD plugin to integrate 2D sprite-based animation systems within a 3D Unreal Engine world.</li></ul>",
@@ -68,10 +68,10 @@
         ],
         "playLink": "https://hajimbo.itch.io/super-nasi-odyssey",
         "gallery": [
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Nasi+Gameplay+1",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Nasi+Cutscene",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Nasi+Level+Design",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Nasi+Combat"
+            "../imgs/gamethumbs/sno/sno1.PNG",
+            "../imgs/gamethumbs/sno/sno2.PNG",
+            "../imgs/gamethumbs/sno/sno3.PNG",
+            "../imgs/gamethumbs/sno/sno4.PNG"
         ]
     }
   },
@@ -86,7 +86,7 @@
     "itchUrl": "https://hajimbo.itch.io/seru-hooty",
     "tags": ["Project Manager", "Gameplay Programmer"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Seru+Hooty+Hero",
+        "heroImage": "../imgs/gamethumbs/seru/seru1.PNG",
         "windowTitle": "[ seru_hooty.exe ]",
         "overview": "<p>Seru Hooty is a 3D puzzle game that challenges player precision and patience. The core gameplay loop revolves around movement timing; players must navigate the environment wisely and smoothly to avoid obstacles in a rhythm-like fashion.</p>",
         "contributions": "<p>I was responsible for the entire codebase for this project and also designed the 2nd level.</p><ul class='contribution-list'><li><strong>Core Logic:</strong> Programmed every aspect of the game from scratch in C#.</li><li><strong>Physics & Timing:</strong> Implemented the core movement timing mechanics and collision detection.</li><li><strong>UI Implementation:</strong> Integrated Aseprite assets into Unity for the user interface.</li></ul>",
@@ -99,10 +99,10 @@
         ],
         "playLink": "https://hajimbo.itch.io/seru-hooty",
         "gallery": [
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Seru+Puzzle+1",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Seru+Movement",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Seru+Level+Art",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Seru+Menu"
+            "../imgs/gamethumbs/seru/seru2.PNG",
+            "../imgs/gamethumbs/seru/seru3.PNG",
+            "../imgs/gamethumbs/seru/seru4.PNG",
+            "../imgs/gamethumbs/seru/seru5.PNG"
         ]
     }
   },
@@ -117,7 +117,7 @@
     "itchUrl": "https://hajimbo.itch.io/elians-bloom",
     "tags": ["Lead Programmer", "Level Designer"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Elians+Bloom+Hero",
+        "heroImage": "../imgs/gamethumbs/eb/eb5.jpeg",
         "windowTitle": "[ elians_bloom.py ]",
         "overview": "<p>Elian's Bloom is a 2D narrative platformer developed in Python. The story follows Elian, a young boy on an urgent quest to find the 'Golden Bloom' to cure his mother's mysterious 'Wither' sickness.</p><p>The journey takes Elian from the corrupted 'Green Tangle' to the magical 'Golden Grove'. Gameplay relies on core platforming mechanics like running, jumping, dashing, and wall-jumping to overcome environmental obstacles and enemies.</p>",
         "contributions": "<p>As the Lead Programmer and Level Designer, my focus was on building a robust engine using Pygame.</p><ul class='contribution-list'><li><strong>Core Engine:</strong> Coded the majority of the game logic, including physics and collision, using Python 3.11 and Pygame CE.</li><li><strong>Visual Effects:</strong> Implemented dynamic special effects to visualize the 'Wither' sickness and magical elements.</li><li><strong>Level Editor:</strong> Built and utilized a custom level editor to design the game's two distinct environments.</li></ul>",
@@ -130,10 +130,10 @@
         ],
         "playLink": "https://hajimbo.itch.io/elians-bloom",
         "gallery": [
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Green+Tangle+Level",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Golden+Grove+Level",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Elian+VFX",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Custom+Level+Editor"
+            "../imgs/gamethumbs/eb/eb1.PNG",
+            "../imgs/gamethumbs/eb/eb2.PNG",
+            "../imgs/gamethumbs/eb/eb3.PNG",
+            "../imgs/gamethumbs/eb/eb4.PNG"
         ]
     }
   },
