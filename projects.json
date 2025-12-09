@@ -148,7 +148,7 @@
     "itchUrl": "https://hajimbo.itch.io/elians-bloom",
     "tags": ["Game Designer", "Project Manager"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Dungeon+Escape+Board",
+        "heroImage": "../imgs/gamethumbs/de/de1.PNG",
         "windowTitle": "[ dungeon_escape.pdf ]",
         "overview": "<p>Dungeon Escape is a competitive, turn-based survival horror board game for 3-4 players. Players must navigate a dangerous 25x25 grid maze, roll dice to move, and race to find one of two hidden keys to escape.</p><p>The twist? A minotaur hunts the players down, advancing after every turn. Players must balance speed and risk, deciding whether to sabotage their friends or focus on their own survival while avoiding traps and the ever-encroaching beast.</p>",
         "contributions": "<p>My primary contributions were in game design and quality assurance.</p><ul class='contribution-list'><li><strong>Game Design & Balancing:</strong> Designed the card content and wrote the comprehensive rulesheet to ensure clarity and fairness.</li><li><strong>QA Testing:</strong> Conducted playtests to balance the PvE and PvP mechanics, ensuring the 'Minotaur' threat felt fair but formidable.</li><li><strong>Visuals:</strong> Assisted with asset creation using Photoshop and Canva.</li></ul>",
@@ -161,10 +161,10 @@
         ],
         "playLink": "",
         "gallery": [
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Board+Setup",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Card+Designs",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Minotaur+Piece",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Gameplay+Session"
+            "../imgs/gamethumbs/de/de2.PNG",
+            "../imgs/gamethumbs/de/de3.PNG",
+            "../imgs/gamethumbs/de/de4.PNG",
+            "../imgs/gamethumbs/de/de5.PNG"
         ]
     }
   },
@@ -179,7 +179,7 @@
     "itchUrl": "https://hajimbo.itch.io/midnight-arcade-mayhem",
     "tags": ["Lead Developer", "VR"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Midnight+Arcade+VR",
+        "heroImage": "../imgs/gamethumbs/mam/mam1.PNG",
         "windowTitle": "[ midnight_arcade.exe ]",
         "overview": "<p>Midnight Arcade Mayhem plunges you into the shoes of a young boy on a mission to play all four hidden arcade minigames before 6 AM—without waking up your sleepwalking mother.</p><p>Built for the Meta Quest 2, this VR experience blends stealth, arcade, and horror genres. You must use environmental awareness to tip-toe through hallways, duck behind furniture, and evade the terrifying gaze of Mom.</p>",
         "contributions": "<p>I focused on the level design and enemy AI implementation for VR.</p><ul class='contribution-list'><li><strong>Level Design:</strong> Designed the house layout using low-poly models optimized for VR performance on the Quest 2.</li><li><strong>AI Programming:</strong> Implemented the 'Sleepwalking Mum' AI using Unity's NavMesh system with random patrol paths.</li><li><strong>VR Integration:</strong> Ensured smooth locomotion and interaction mechanics within the VR environment.</li></ul>",
@@ -192,10 +192,10 @@
         ],
         "playLink": "https://hajimbo.itch.io/midnight-arcade-mayhem",
         "gallery": [
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=VR+Gameplay",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Sleepwalking+Mom",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Arcade+MiniGame",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=House+Layout"
+            "../imgs/gamethumbs/mam/mam2.PNG",
+            "../imgs/gamethumbs/mam/mam3.PNG",
+            "../imgs/gamethumbs/mam/mam4.PNG",
+            "../imgs/gamethumbs/mam/mam5.PNG"
         ]
     }
   },
@@ -240,7 +240,7 @@
     "itchUrl": "https://hajimbo.itch.io/sugar-slasher",
     "tags": ["Project Manager", "Gameplay Programmer"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Sugar+Slasher+Title",
+        "heroImage": "../imgs/gamethumbs/sugarthumb.png",
         "windowTitle": "[ sugar_slasher.exe ]",
         "overview": "<p>The last magical girl has returned — rebuilt as a cybernetic warrior. 100 years after the magical war, her mission is to hunt down the cyborg general who destroyed her world.</p><p>Sugar Slasher is a fast-paced arcade shoot ’em up that mixes bright magical girl visuals with cyberpunk vibes. Blast through waves of enemies and master the parry mechanic to survive the final boss battle in the heart of Tokyo.</p>",
         "contributions": "<p>I served as the Project Manager and Lead Game Designer for this 6-person team.</p><ul class='contribution-list'><li><strong>Management:</strong> Organized the team workflow for the Magical Girl Game Jam #12.</li><li><strong>Gameplay Programming:</strong> Coded the core gameplay loop and the enemy wave spawner system.</li><li><strong>Game Design:</strong> Designed the player mechanics, including the unique bullet parry system.</li></ul>",
@@ -253,10 +253,9 @@
         ],
         "playLink": "https://hajimbo.itch.io/sugar-slasher",
         "gallery": [
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Bullet+Hell+Gameplay",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Boss+Fight",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Parry+Mechanic",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Cyberpunk+Tokyo"
+            "../imgs/gamethumbs/ss/ss1.PNG",
+            "../imgs/gamethumbs/ss/ss2.PNG",
+            "../imgs/gamethumbs/ss/ss3.PNG"
         ]
     }
   },
@@ -271,7 +270,7 @@
     "itchUrl": "https://psychicflash.itch.io/luggage-buds",
     "tags": ["Pixel Art Artist", "UI Artist"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Luggage+Buds+Art",
+        "heroImage": "../imgs/gamethumbs/lb/lb1.png",
         "windowTitle": "[ luggage_buds.exe ]",
         "overview": "<p>Tappy, Bam, Ogu, and Biggie woke up realizing they haven't packed! Help them sort their luggage so they can catch their flight.</p><p>Luggage Buds is a cute pixel-art organization game created for the Red Games Jam 2025 (Sponsored by AirAsia). It tests your speed and sorting skills under a tight time limit.</p>",
         "contributions": "<p>I focused on the artistic direction, specifically UI and Environment.</p><ul class='contribution-list'><li><strong>UI Design:</strong> Created all user interface elements including menus and buttons using Aseprite.</li><li><strong>Background Art:</strong> Designed the background environments to fit the cute, vibrant pixel art style.</li><li><strong>Rapid Prototyping:</strong> Delivered all assets within the strict 48-hour deadline.</li></ul>",
@@ -284,10 +283,10 @@
         ],
         "playLink": "https://psychicflash.itch.io/luggage-buds",
         "gallery": [
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Sorting+Gameplay",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Cute+UI+Design",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Character+Select",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Win+Screen"
+            "../imgs/gamethumbs/lb/lb2.png",
+            "../imgs/gamethumbs/lb/lb3.png",
+            "../imgs/gamethumbs/lb/lb4.png",
+            "../imgs/gamethumbs/lb/lb5.png"
         ]
     }
   },
@@ -302,7 +301,7 @@
     "itchUrl": "https://joycezq.itch.io/seven-days-to-feed",
     "tags": ["Pixel Art Artist", "Environment Artist"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Farm+Environment",
+        "heroImage": "../imgs/gamethumbs/seventhumb.png",
         "windowTitle": "[ seven_days.exe ]",
         "overview": "<p>A mysterious wizard has cursed your village for wasting food. You play as a farmer with limited resources who must grow enough food to feed the village or face seventy years of starvation.</p><p>Inspired by the theme 'Outplay Hunger', you must plant seeds, water crops, and use fertilizer to fend off pests in this farming management game.</p>",
         "contributions": "<p>I was the primary Environment Artist for Team Sleepy Devs.</p><ul class='contribution-list'><li><strong>Environment Design:</strong> Designed the complete farmland environment tilemaps using Aseprite.</li><li><strong>Icon Design:</strong> Created the UI icons for the farming tools (scythe, water, fertilizer).</li><li><strong>Collaboration:</strong> Worked closely with the programmer to ensure assets fit the grid-based gameplay.</p></ul>",
@@ -362,7 +361,7 @@
     "detailsPage": "subpages/view.html?id=quizzard",
     "tags": ["Project Manager", "Backend Developer"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Quizzard+Dashboard",
+        "heroImage": "../imgs/gamethumbs/qz/qz3.PNG",
         "windowTitle": "[ quizzard_server.php ]",
         "overview": "<p>Quizzard is a gamified e-learning web application designed to make studying engaging. It treats education like an RPG: students earn XP for answering quizzes correctly, climb the competitive leaderboard, and unlock special badges at certain levels.</p><p>The platform supports user accounts, progress tracking, and dynamic quiz generation, bridging the gap between study and play.</p>",
         "contributions": "<p>I served as the Backend Developer and assisted with frontend flow.</p><ul class='contribution-list'><li><strong>Backend Development:</strong> Designed the MySQL database schema and wrote the PHP scripts to handle user authentication, quiz logic, and XP calculations.</li><li><strong>Frontend Flow:</strong> Created the website wireframes and helped implement the user journey using HTML, CSS, and JavaScript.</li><li><strong>System Integration:</strong> Connected the frontend UI with the backend database to ensure real-time leaderboard updates.</li></ul>",
@@ -375,10 +374,10 @@
         ],
         "playLink": "https://quizzard.serv00.net/",
         "gallery": [
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Leaderboard+UI",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Quiz+Interface",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Profile+Badges",
-            "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=Database+Schema"
+            "../imgs/gamethumbs/qz/qz2.PNG",
+            "../imgs/gamethumbs/qz/qz1.PNG",
+            "../imgs/gamethumbs/qz/qz4.PNG",
+            "../imgs/gamethumbs/qz/qz5.PNG"
         ]
     }
   },
