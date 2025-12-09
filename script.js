@@ -1,5 +1,5 @@
 let highestZ = 100;
-// functions for project generations
+//project generations
 function getTagClass(tag) {
     const t = tag.toLowerCase();
     if (t.includes('programmer') || t.includes('developer') || t.includes('co-developer')) return 'tag-prog';
@@ -343,7 +343,6 @@ function initParticles() {
 }
 
 function initDraggableWindows() {
-    // UPDATED: Now selects ALL windows except the modal, regardless of parent container
     const allWindows = document.querySelectorAll('.window:not(#modal-window)');
     
     allWindows.forEach(windowEl => {
