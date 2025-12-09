@@ -402,8 +402,8 @@ img, video {
 }
 #modal-window {
     width: 90%;
-    max-width: 800px;
-    max-height: 90vh;
+    max-width: 1000px;
+    max-height: 110vh;
     margin-bottom: 0; 
 }
 .modal-content-layout {
