@@ -331,7 +331,7 @@
     "detailsPage": "subpages/view.html?id=no-signal",
     "tags": ["Level Designer", "Game Logic"],
     "detailedInfo": {
-        "heroImage": "https://placehold.co/1280x720/2a2a2a/d4d4d4?text=No+Signal+Level",
+        "heroImage": "../imgs/gamethumbs/nosignalthumb.png",
         "windowTitle": "[ no_signal.exe ]",
         "overview": "<p>No Signal is a top-down atmospheric puzzle game built around the theme of 'Signal/Light Loss'. The goal is simple but stressful: reach the Signal Booster exit before the screen goes completely black.</p><p>The game features a shrinking 'vision circle' mechanic—players have exactly 60 seconds to navigate a static maze before their field of view reaches zero and they are lost in the darkness.</p>",
         "contributions": "<p>I was responsible for the Level Design and core Game Logic.</p><ul class='contribution-list'><li><strong>Level Design:</strong> Built the maze layout using Unity Tilemap and ProBuilder, placing start/end points and defining collision boundaries.</li><li><strong>Scope Management:</strong> Focused on a 'No-Crunch' scope by utilizing geometric shapes instead of complex assets to finish within 48 hours.</li></ul>",
@@ -744,8 +744,8 @@
     
     {
         "id": "personal-portfolio",
-        "category": "personal",
-        "title": "Personal Portfolio Website",
+        "category": "software",
+        "title": "Portfolio Website",
         "description": "Solo-developed, responsive website showcasing my projects, coded with HTML, CSS, and vanilla JavaScript.",
         "mediaSource": "imgs/webvids/portfolio_demo.mp4",
         "poster": "imgs/gamethumbs/pers/pers1.PNG",
@@ -754,7 +754,7 @@
         "tags": ["Frontend Development", "Web Design"],
         
         "detailedInfo": {
-        "heroImage": "../imgs/webthumbs/portfolio_hero.png",
+        "heroImage": "../imgs/gamethumbs/pers/pers1.PNG",
         "windowTitle": "[ personal_portfolio.html ]",
         "overview": "<p>This is the responsive portfolio website you are currently viewing. It was solo-coded from scratch, focusing on a clean, modern design and optimal performance across all device sizes.</p>",
         "contributions": "<p>Key contributions included:</p><ul class='contribution-list'><li><strong>Solo Development:</strong> Coded the entire website from the ground up and managed hosting on GitHub Pages.</li><li><strong>Responsive Design:</strong> Ensured a fully adaptive layout, optimizing the user experience for both mobile and desktop screens.</li></ul>",
@@ -767,53 +767,51 @@
         ],
         "playLink": "#",
         "gallery": [
-            "../imgs/webthumbs/p1.png",
-            "../imgs/webthumbs/p2.png"
+            "../imgs/gamethumbs/pers/pers2.PNG",
+            "../imgs/gamethumbs/pers/pers3.PNG",
+            "../imgs/gamethumbs/pers/pers4.PNG",
+            "../imgs/gamethumbs/pers/pers5.PNG"
         ]
         },
         "roleDetails": []
     },
     {
         "id": "layarkini-app",
-        "category": "personal",
+        "category": "software",
         "title": "LayarKini: Movie Browser (React)",
         "description": "A responsive, Netflix-style movie browsing application built with React and Tailwind CSS, featuring TMDB API integration and a content randomizer.",
         "mediaSource": "imgs/appvids/layarkini_demo.mp4",
         "poster": "imgs/gamethumbs/lk/lk1.PNG",
         "detailsPage": "subpages/view.html?id=layarkini-app",
         "itchUrl": "",
-        "tags": ["Frontend Engineer", "React", "API"],
+        "tags": ["Frontend Engineer", "API"],
         
         "detailedInfo": {
-        "heroImage": "../imgs/appthumbs/layarkini_hero.png",
+        "heroImage": "../imgs/gamethumbs/lk/lk1.PNG",
         "windowTitle": "[ layarkini_app.jsx ]",
         "overview": "<p>LayarKini is a practice project using React and modern front-end tooling to create a movie discovery experience. It connects to the TMDB API and includes regional features like Malay language titles where available, as well as a fun movie randomizer.</p>",
-        "contributions": "<p>My primary contributions were:</p><ul class='contribution-list'><li><strong>Front-End Architecture:</strong> Designed and implemented the component-based front-end structure using React and styled with Tailwind CSS.</li><li><strong>Technical Solutions:</strong> Developed core application logic including state management for the randomizer flow and implementing search debounce for efficient API calls.</li><li><strong>Data Resilience:</strong> Engineered technical solutions for image fallbacks to ensure a robust user experience despite potential API data gaps.</li><li><strong>Documentation:</strong> Authored the comprehensive Software Design Document (SDD) defining all technical specifications and implementation plans.</li></ul>",
+        "contributions": "<p>My primary contributions were:</p><ul class='contribution-list'><li><strong>Front-End Architecture:</strong> Designed and implemented the component-based front-end structure using React and styled with Tailwind CSS.</li><li><strong>Technical Solutions:</strong> Developed core application logic including state management for the randomizer flow and implementing search debounce for efficient API calls.</li><li><strong>Data Resilience:</strong> Engineered technical solutions for image fallbacks to ensure a robust user experience despite potential API data gaps.</li><li><strong>Mobile Responsiveness:</strong> Ensured a seamless user experience across all devices (desktop, tablet, and mobile)and created dedicated mobile UI components.</li></ul>",
         "fastFacts": [
             { "label": "Role", "value": "UI/UX & Frontend Engineer" },
             { "label": "Tools", "value": "React (Vite), Tailwind CSS, TMDB API" },
             { "label": "Platform", "value": "Web" },
-            { "label": "Team Size", "value": "1 (Solo Dev)" },
+            { "label": "Team Size", "value": "Solo" },
             { "label": "Duration", "value": "3 Days" }
         ],
         "playLink": "#",
         "gallery": [
-            "../imgs/appthumbs/lk_g1.png",
-            "../imgs/appthumbs/lk_g2.png",
-            "../imgs/appthumbs/lk_g3.png"
+            "../imgs/gamethumbs/lk/lk2.PNG",
+            "../imgs/gamethumbs/lk/lk3.PNG",
+            "../imgs/gamethumbs/lk/lk4.PNG",
+            "../imgs/gamethumbs/lk/lk5.PNG",
+            "../imgs/gamethumbs/lk/lk6.PNG"
         ]
         },
-        "roleDetails": [
-        {
-            "role": "Software Design Document",
-            "windowTitle": "[ SDD_layarkini.pdf ]",
-            "content": "<h3>Excerpt</h3><p>Work in progress</p>"
-        }
-        ]
+        "roleDetails": []
     },
     {
         "id": "dungeon-escape-analysis",
-        "category": "academic",
+        "category": "others",
         "title": "Dungeon Escape Balance Analysis (Monte Carlo)",
         "description": "A Monte Carlo simulation running 30,000+ games of a board game to analyze mechanic balance, win conditions, and asymmetry.",
         "mediaSource": "imgs/data/de_sim_demo.mp4",
@@ -823,7 +821,7 @@
         "tags": ["Data Analysis", "Python"],
         
         "detailedInfo": {
-        "heroImage": "../imgs/data/de_sim_hero.png",
+        "heroImage": "../imgs/gamethumbs/mont/mont1.PNG",
         "windowTitle": "[ balance_report.pdf ]",
         "overview": "<p>This project utilized data science techniques to stress-test a complex, asymmetric board game design. By automating gameplay and running over 30,000 trials, the goal was to provide empirical data for game balance decisions.</p>",
         "contributions": "<p>Key achievements from the project included:</p><ul class='contribution-list'><li><strong>Simulation Engine Design:</strong> Designed and implemented an abstract simulation engine in Python capable of modeling complex, asymmetric game rules (AI decision-making, deck probability).</li><li><strong>Balance Testing:</strong> Executed 30,000 automated simulations across three scenarios to test hypotheses regarding game lethality and item rarity.</li><li><strong>Imbalance Identification:</strong> Used Pandas and Seaborn for statistical analysis, identifying a significant imbalance in player starting positions (e.g., Player 4 had a significantly higher win rate than Player 1).</li><li><strong>Redesign Prompt:</strong> Discovered that the \"Survival Horror\" win condition occurred in less than 3% of games, providing data-driven justification for a major redesign of the Monster mechanics.</li></ul>",
@@ -836,21 +834,21 @@
         ],
         "playLink": "#",
         "gallery": [
-            "../imgs/data/de_g1.png",
-            "../imgs/data/de_g2.png"
+            "../imgs/gamethumbs/mont/mont2.PNG",
+            "../imgs/gamethumbs/mont/mont3.PNG"
         ]
         },
         "roleDetails": [
         {
             "role": "Simulation Code",
             "windowTitle": "[ simulation_engine.py ]",
-            "content": "<h3>Engine Summary</h3><p>Work in progress</p>"
+            "content": "<h3>Engine Summary</h3><p>Coming soon</p>"
         }
         ]
     },
     {
         "id": "mindlink-ai-app",
-        "category": "academic",
+        "category": "Other",
         "title": "Mindlink AI Companion (UI/UX Study)",
         "description": "A complete UI/UX design case study for an AI companion chatbot/tracker focused on mental health assessment and support.",
         "mediaSource": "imgs/design/mindlink_walkthrough.mp4",
@@ -860,7 +858,7 @@
         "tags": ["UI/UX Design", "Design Thinking"],
         
         "detailedInfo": {
-        "heroImage": "../imgs/design/mindlink_hero.png",
+        "heroImage": "../imgs/gamethumbs/mind/mind1.PNG",
         "windowTitle": "[ mindlink_design_report.pdf ]",
         "overview": "<p>Mindlink is a hypothetical mobile application designed to leverage AI for personalized mental wellness tracking. This project focused entirely on the user interface and user experience flow.</p>",
         "contributions": "<p>My core contribution was the comprehensive UI/UX development:</p><ul class='contribution-list'><li><strong>User Flow Design:</strong> Developed the complete user experience, from onboarding to daily tracking and conversational interaction.</li><li><strong>Visual Prototyping:</strong> Created high-fidelity mockups and interactive prototypes using Canva to illustrate the app's aesthetic and functionality.</li><li><strong>Mental Health Focus:</strong> Designed the chat interface and tracker to facilitate mental health assessment and provide supportive, non-judgemental feedback.</li></ul>",
@@ -873,9 +871,10 @@
         ],
         "playLink": "#",
         "gallery": [
-            "../imgs/design/ml_g1.png",
-            "../imgs/design/ml_g2.png",
-            "../imgs/design/ml_g3.png"
+            "../imgs/gamethumbs/mind/mind2.PNG",
+            "../imgs/gamethumbs/mind/mind3.PNG",
+            "../imgs/gamethumbs/mind/mind4.PNG",
+            "../imgs/gamethumbs/mind/mind5.PNG"
         ]
         },
         "roleDetails": []
