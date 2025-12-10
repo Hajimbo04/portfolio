@@ -1,7 +1,7 @@
 [
   {
     "id": "gasing-guardian",
-    "category": "academic",
+    "category": "academic gamedev csharp",
     "title": "Gasing Guardian",
     "description": "Built a physics-based grappling hook, player combat system, and enemy AI for a 2D platformer.",
     "mediaSource": "imgs/gamevids/gg_vid.mp4",
@@ -46,7 +46,7 @@
   },
   {
     "id": "super-nasi-odyssey",
-    "category": "academic",
+    "category": "academic gamedev",
     "title": "Super Nasi Odyssey",
     "description": "Developed an 8-way character movement and a timeline-based cutscene system in Unreal Engine for a 2.5D adventure platformer.",
     "mediaSource": "imgs/gamevids/sno_vid.mp4",
@@ -77,7 +77,7 @@
   },
   {
     "id": "seru-hooty",
-    "category": "academic",
+    "category": "academic gamedev",
     "title": "Seru Hooty",
     "description": "Programmed all core physics and timing-based puzzle mechanics for a 3D puzzle game using Unity.",
     "mediaSource": "imgs/gamevids/seru_vid.mp4",
@@ -108,7 +108,7 @@
   },
   {
     "id": "elians-bloom",
-    "category": "academic",
+    "category": "academic gamedev",
     "title": "Elian's Bloom",
     "description": "Coded all game logic and implemented visual special effects for a 2D game in Pygame.",
     "mediaSource": "imgs/gamevids/eb_vid.mp4",
@@ -136,41 +136,41 @@
             "../imgs/gamethumbs/eb/eb4.PNG"
         ]
     }
-  },
-{
-    "id": "dungeon-escape",
-    "category": "academic",
-    "title": "Dungeon Escape (Board Game)",
-    "description": "Designed and balanced a 3-4 player survival horror board game with PvE/PvP mechanics.",
-    "mediaSource": "static/videos/dungeon-escape-preview.mp4",
-    "poster": "imgs/gamethumbs/dungeonthumb.PNG",
-    "detailsPage": "subpages/view.html?id=dungeon-escape",
-    "itchUrl": "https://hajimbo.itch.io/elians-bloom",
-    "tags": ["Game Designer", "Project Manager"],
-    "detailedInfo": {
-        "heroImage": "../imgs/gamethumbs/de/de1.PNG",
-        "windowTitle": "[ dungeon_escape.pdf ]",
-        "overview": "<p>Dungeon Escape is a competitive, turn-based survival horror board game for 3-4 players. Players must navigate a dangerous 25x25 grid maze, roll dice to move, and race to find one of two hidden keys to escape.</p><p>The twist? A minotaur hunts the players down, advancing after every turn. Players must balance speed and risk, deciding whether to sabotage their friends or focus on their own survival while avoiding traps and the ever-encroaching beast.</p>",
-        "contributions": "<p>My primary contributions were in game design and quality assurance.</p><ul class='contribution-list'><li><strong>Game Design & Balancing:</strong> Designed the card content and wrote the comprehensive rulesheet to ensure clarity and fairness.</li><li><strong>QA Testing:</strong> Conducted playtests to balance the PvE and PvP mechanics, ensuring the 'Minotaur' threat felt fair but formidable.</li><li><strong>Visuals:</strong> Assisted with asset creation using Photoshop and Canva.</li></ul>",
-        "fastFacts": [
-            { "label": "Role", "value": "Game Designer, Rules Writer" },
-            { "label": "Tools", "value": "Photoshop, Canva" },
-            { "label": "Platform", "value": "Physical Board Game" },
-            { "label": "Team Size", "value": "5" },
-            { "label": "Duration", "value": "14 Weeks" }
-        ],
-        "playLink": "",
-        "gallery": [
-            "../imgs/gamethumbs/de/de2.PNG",
-            "../imgs/gamethumbs/de/de3.PNG",
-            "../imgs/gamethumbs/de/de4.PNG",
-            "../imgs/gamethumbs/de/de5.PNG"
-        ]
-    }
-  },
+    },
+    {
+        "id": "dungeon-escape",
+        "category": "academic gamedev",
+        "title": "Dungeon Escape (Board Game)",
+        "description": "Designed and balanced a 3-4 player survival horror board game with PvE/PvP mechanics.",
+        "mediaSource": "static/videos/dungeon-escape-preview.mp4",
+        "poster": "imgs/gamethumbs/dungeonthumb.PNG",
+        "detailsPage": "subpages/view.html?id=dungeon-escape",
+        "itchUrl": "https://hajimbo.itch.io/elians-bloom",
+        "tags": ["Game Designer", "Project Manager"],
+        "detailedInfo": {
+            "heroImage": "../imgs/gamethumbs/de/de1.PNG",
+            "windowTitle": "[ dungeon_escape.pdf ]",
+            "overview": "<p>Dungeon Escape is a competitive, turn-based survival horror board game for 3-4 players. Players must navigate a dangerous 25x25 grid maze, roll dice to move, and race to find one of two hidden keys to escape.</p><p>The twist? A minotaur hunts the players down, advancing after every turn. Players must balance speed and risk, deciding whether to sabotage their friends or focus on their own survival while avoiding traps and the ever-encroaching beast.</p>",
+            "contributions": "<p>My primary contributions were in game design and quality assurance.</p><ul class='contribution-list'><li><strong>Game Design & Balancing:</strong> Designed the card content and wrote the comprehensive rulesheet to ensure clarity and fairness.</li><li><strong>QA Testing:</strong> Conducted playtests to balance the PvE and PvP mechanics, ensuring the 'Minotaur' threat felt fair but formidable.</li><li><strong>Visuals:</strong> Assisted with asset creation using Photoshop and Canva.</li></ul>",
+            "fastFacts": [
+                { "label": "Role", "value": "Game Designer, Rules Writer" },
+                { "label": "Tools", "value": "Photoshop, Canva" },
+                { "label": "Platform", "value": "Physical Board Game" },
+                { "label": "Team Size", "value": "5" },
+                { "label": "Duration", "value": "14 Weeks" }
+            ],
+            "playLink": "",
+            "gallery": [
+                "../imgs/gamethumbs/de/de2.PNG",
+                "../imgs/gamethumbs/de/de3.PNG",
+                "../imgs/gamethumbs/de/de4.PNG",
+                "../imgs/gamethumbs/de/de5.PNG"
+            ]
+        }
+    },
   {
     "id": "midnight-arcade",
-    "category": "academic",
+    "category": "academic gamedev",
     "title": "Midnight Arcade Mayhem (VR)",
     "description": "Programmed the core enemy AI (sleepwalking mum) and designed the house level layout for a comedic VR horror-arcade game.",
     "mediaSource": "imgs/gamevids/mam_vid.mp4",
@@ -201,7 +201,7 @@
   },
   {
     "id": "paper-adventure",
-    "category": "academic",
+    "category": "academic gamedev",
     "title": "Page of Peril",
     "description": "Managed a team of 5, designed all puzzles, and wrote the game narrative based on a 2D-to-3D world-switching mechanic.",
     "mediaSource": "static/videos/paper-adventure-preview.mp4",
@@ -231,7 +231,7 @@
   },
 {
     "id": "sugar-slasher",
-    "category": "gamejam",
+    "category": "gamejam gamedev",
     "title": "Sugar Slasher",
     "description": "Managed the team and programmed core gameplay, including the enemy wave spawner, for a 2-week game jam.",
     "mediaSource": "static/videos/sugar-slasher-preview.mp4",
@@ -261,7 +261,7 @@
   },
   {
     "id": "luggage-buds",
-    "category": "gamejam",
+    "category": "gamejam gamedev",
     "title": "Luggage Buds",
     "description": "Created UI and background assets in Aseprite for a 5-person team during a 48-hour game jam.",
     "mediaSource": "imgs/gamevids/lb_vid.mp4",
@@ -292,7 +292,7 @@
   },
   {
     "id": "seven-days-feed",
-    "category": "gamejam",
+    "category": "gamejam gamedev",
     "title": "Seven Days to Feed",
     "description": "Designed all environmental tilemaps and UI icons for a 4-person team.",
     "mediaSource": "static/videos/seven-days-preview.mp4",
@@ -323,7 +323,7 @@
   },
 {
     "id": "no-signal",
-    "category": "gamejam",
+    "category": "gamejam gamedev",
     "title": "No Signal",
     "description": "Designed the level and game logic for a top-down atmospheric puzzle game where light is your lifeline.",
     "mediaSource": "static/videos/no-signal-preview.mp4",
@@ -593,7 +593,7 @@
   },
 {
     "id": "psa-video",
-    "category": "others",
+    "category": "art",
     "title": "Social Media PSA",
     "description": "Served as the primary actor and narrator for a high-production PSA video educating viewers on the dangers of oversharing personal information.",
     "mediaSource": "is-this-your-video.mp4",
@@ -623,7 +623,7 @@
   },
   {
     "id": "movie-brochure",
-    "category": "others",
+    "category": "art",
     "title": "Movie Brochure Design",
     "description": "Designed a professional, print-ready tri-fold brochure for 'Howl's Moving Castle' using Adobe Photoshop.",
     "mediaSource": "is-this-your-video.mp4",
@@ -653,7 +653,7 @@
   },
   {
     "id": "retail-analysis",
-    "category": "others",
+    "category": "data",
     "title": "Retail Behavior Analysis",
     "description": "Analyzed a large retail dataset using R to identify statistically significant correlations between payment methods and customer ratings.",
     "mediaSource": "static/videos/retail-analysis-preview.mp4",
@@ -683,7 +683,7 @@
   },
 {
     "id": "event-booking-ux",
-    "category": "others",
+    "category": "software",
     "title": "Event Booking App UI/UX",
     "description": "Designed a high-fidelity event booking app prototype in Figma, featuring a comprehensive user journey from event discovery to ticket purchase.",
     "mediaSource": "static/videos/figma-event-preview.mp4",
@@ -713,7 +713,7 @@
   },
   {
     "id": "2d-level-design",
-    "category": "others",
+    "category": "gamedev",
     "title": "2D Level Design",
     "description": "Designed a narrative-driven 2D Unity level focusing on environmental storytelling across three distinct biomes.",
     "mediaSource": "static/videos/narrative-level-preview.mp4",
@@ -741,7 +741,6 @@
         ]
     }
   },
-    
     {
         "id": "personal-portfolio",
         "category": "software",
@@ -811,7 +810,7 @@
     },
     {
         "id": "dungeon-escape-analysis",
-        "category": "others",
+        "category": "data",
         "title": "Dungeon Escape Balance Analysis (Monte Carlo)",
         "description": "A Monte Carlo simulation running 30,000+ games of a board game to analyze mechanic balance, win conditions, and asymmetry.",
         "mediaSource": "imgs/data/de_sim_demo.mp4",
@@ -848,7 +847,7 @@
     },
     {
         "id": "mindlink-ai-app",
-        "category": "Other",
+        "category": "art",
         "title": "Mindlink AI Companion (UI/UX Study)",
         "description": "A complete UI/UX design case study for an AI companion chatbot/tracker focused on mental health assessment and support.",
         "mediaSource": "imgs/design/mindlink_walkthrough.mp4",

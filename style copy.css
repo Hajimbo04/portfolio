@@ -28,13 +28,13 @@
 .about-page-wrapper,    
 /* .projects-explorer */
 .contact-section {
-    padding-top: 30px;
-    width: 100%;       
-    clear: both;       
-    margin-top: 10px;  
+    padding-top: 10px;
+    width: 100%;       /* Ensures it takes full width */
+    clear: both;       /* Safety net in case any floats are affecting layout */
+    margin-top: 10px;  /* Optional: Adds a bit more breathing room */
 }
 .projects-explorer {
-    padding-top: 0px; 
+    padding-top: 0px; /* Reduced to match the default gap, or 0 if you prefer to control with margin */
 }
 /* light mode */
 .light-mode {
@@ -48,6 +48,7 @@
     --color-link-hover: #000000;
     --contact-github: var(--color-text);
 }
+
 /* global */
 * {
     box-sizing: border-box;
@@ -56,8 +57,7 @@
 }
 html {
     scrollbar-width: none;  
-    -ms-overflow-style: none;
-    scroll-behavior: smooth;
+    -ms-overflow-style: none; 
 }
 html::-webkit-scrollbar { 
     display: none;
@@ -80,10 +80,6 @@ body::-webkit-scrollbar {
     max-width: 1000px; 
     margin: 20px auto;
     padding: 0 20px;
-}
-/* Scroll Margin */
-#home, #about, #contact {
-    scroll-margin-top: 40px; 
 }
 .container-project-page {
     width: 80%;
@@ -210,6 +206,7 @@ img, video {
     scrollbar-width: none;  
     -ms-overflow-style: none; 
 }
+
 .window-content::-webkit-scrollbar {
     display: none; 
 }
@@ -253,6 +250,52 @@ img, video {
     align-items: center;
     text-align: left;
     gap: 20px;
+}
+
+/* carousell and projects */
+.all-projects-carousel {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+.carousel-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.carousel-header-wrapper h2 {
+    margin: 0; 
+    text-align: center;
+}
+.carousel-header-wrapper .carousel-btn {
+    flex-shrink: 0; 
+}
+.carousel-container {
+    width: 100%; 
+    overflow: hidden; 
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-header-wrapper a.projects-link {
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.2s; 
+}
+.projects-link .hover-text {
+    display: none;
+}
+.projects-link:hover .default-text {
+    display: none;
+}
+.projects-link:hover .hover-text {
+    display: inline;
+}
+.carousel-header-wrapper a.projects-link:hover h2,
+.carousel-header-wrapper a.projects-link:hover {
+    color: var(--color-link-hover);
 }
 
 /* project card */
@@ -423,11 +466,6 @@ img, video {
 .about-page-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
-}
-.about-left-column {
-    display: flex;
-    flex-direction: column;
     gap: 30px;
 }
 .about-right-column {
@@ -688,7 +726,7 @@ img, video {
     }
 }
 
-/* gallery */
+/*  gallery */
 .gallery-container-new h2 {
     margin-top: 0; 
 }
@@ -721,7 +759,21 @@ img, video {
     border-color: var(--color-accent);
 }
 
-/* detailed roles */
+.carousel-track.center-content {
+    width: 100%;
+    justify-content: center;
+    transform: none !important; 
+}
+.carousel-header-wrapper.hide-nav .carousel-btn {
+    display: none;
+}
+.carousel-header-wrapper.hide-nav {
+    justify-content: center; 
+}
+.carousel-header-wrapper.hide-nav .carousel-btn {
+    display: none;
+}
+
 .role-buttons-row {
     display: flex;
     flex-wrap: wrap;
@@ -731,6 +783,7 @@ img, video {
     background-color: rgba(0,0,0,0.2);
     border: 2px dashed var(--color-border);
 }
+
 .btn-role-window {
     display: inline-flex;
     align-items: center;
@@ -743,12 +796,14 @@ img, video {
     color: var(--color-text);
     transition: all 0.2s;
 }
+
 .btn-role-window:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 0px var(--color-accent);
     border-color: var(--color-accent);
     color: var(--color-accent);
 }
+
 #role-detail-window {
     position: fixed !important; 
     inset: 0; 
@@ -775,60 +830,60 @@ img, video {
     }
 }
 
-/* explorers */
+/* Explorer Layout */
 .explorer-layout {
     display: flex;
-    gap: 0; 
-    padding: 0; 
-    height: 100%; 
-    min-height: 400px;
+    gap: 0; /* Remove gap to make it look like a split pane */
+    padding: 0; /* Remove padding from main window content to let sidebar flush */
+    height: 600px; /* Give the window a fixed height for scrolling inside */
 }
-.projects-explorer .window {
-    height: 70vh; 
-    min-height: 400px; 
-    resize: vertical; 
-    overflow: hidden;
-}
+
 .explorer-sidebar {
     width: 200px;
-    background-color: var(--color-bg);
+    background-color: var(--color-bg); /* Darker background for sidebar */
     border-right: 4px solid var(--color-border);
     padding: 10px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
 }
+
 .sidebar-header {
     color: var(--color-border);
     font-size: 0.8rem;
     margin-bottom: 10px;
     padding-left: 5px;
 }
+
 .folder-list {
     list-style: none;
 }
+
 .folder-item {
     padding: 8px 10px;
     cursor: pointer;
     color: var(--color-text);
     transition: background 0.2s;
 }
+
 .folder-item:hover {
     background-color: var(--color-window-title);
     color: white;
 }
+
 .folder-item.active {
-    background-color: var(--tag-pm-bg); 
+    background-color: var(--tag-pm-bg); /* Use your existing blue variable */
     color: white;
 }
+
 .explorer-main {
     flex-grow: 1;
     padding: 20px;
-    overflow-y: auto; 
+    overflow-y: auto; /* Allow scrolling ONLY in the project area */
     background-color: var(--color-window-bg);
 }
 
-/* mobile */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .explorer-layout {
         flex-direction: column;
@@ -844,14 +899,10 @@ img, video {
         flex-wrap: wrap;
         gap: 5px;
     }
-    .projects-explorer .window {
-        height: auto; 
-        min-height: auto;
-    }
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 1px;
+  width: 10px;
 }
 
 /* Track */

@@ -15,19 +15,21 @@
     <header class="main-header pixel-border">
         <nav class="main-nav">
             <div class="nav-logo">
-                <a href="#home">[ Muhammad Hazim Bin Abd Halim ]</a>
+                <a href="index.html">[ Muhammad Hazim Bin Abd Halim ]</a>
             </div>
             <ul>
-                <li><a href="#home">[ Home ]</a></li>
-                <li><a href="#about">[ About ]</a></li>
-                <li><a href="#contact">[ Contact ]</a></li>
+                <li><a href="index.html" class="active">[ Home ]</a></li>
+                <li><a href="about.html">[ About ]</a></li>
+                <li><a href="contact.html">[ Contact ]</a></li>
             </ul>
         </nav>
         <button id="theme-toggle" class="btn-pixel">Light Mode</button>
     </header>
+
     <div id="page-content-wrapper">
 
-    <main class="container" id="home">
+    <!-- TOP SECTION: Restricted width (good for reading text) -->
+    <main class="container">
         <section class="hero-section">
             <div class="window pixel-border">
                 <div class="window-titlebar">
@@ -44,6 +46,7 @@
                 </div>
             </div>
         </section>
+
         <section class="quick-about">
             <div class="window pixel-border">
                 <div class="window-titlebar">
@@ -68,13 +71,12 @@
                         <br>
                         <p>> TOOLS: <span style="color: #00ff00;" id="about-tools">[ "Unity (C#)", "Unreal (BP)", "Python (Pandas, Matplotlib)", "RStudio", "PHP/MySQL", "Java", "Figma", "Git" ]</span></p>
                     </div>
-                    <!-- Updated button to link to the section below -->
-                    <a href="#about" class="btn-pixel">Read Full Bio & Skills</a>
+                    <a href="about.html" class="btn-pixel">Read Full Bio & Skills</a>
                 </div>
             </div>
         </section>
     </main> 
-    
+    <!-- change filter list-->
     <section class="projects-explorer container" style="max-width: 1800px; width: 95%; padding-top: 0; margin-top: 50px;"> 
         <div class="window pixel-border">
             <div class="window-titlebar">
@@ -85,30 +87,31 @@
                     <span class="window-btn">X</span>
                 </div>
             </div>
-            <div class="window-content" style="padding: 0; height: 100%;"> 
+            <div class="window-content" style="padding: 0;"> 
                 <div class="explorer-layout">
                     <aside class="explorer-sidebar">
                         <div class="sidebar-header">FOLDERS</div>
                         <ul class="folder-list">
                             <li class="folder-item active" data-filter="all">📂 All Projects</li>
                             <li class="folder-item" data-filter="gamedev">👾 Game Dev</li>
-                            <li class="folder-item" data-filter="software">🌐 Web & Software</li>
+                            <li class="folder-item" data-filter="web">🌐 Web & Software</li>
                             <li class="folder-item" data-filter="data">📊 Data & Analysis</li>
                             <li class="folder-item" data-filter="art">🎨 3D & Art</li>
                         </ul>
                     </aside>
+    
                     <div class="explorer-main">
                         <div class="project-grid" id="project-grid-container"></div>
                     </div>
                 </div>
             </div>
-            <div class="resize-handle"></div>
+            <!-- <div class="resize-handle"></div> -->
         </div>
+        
     </section>
-    
-    <main class="container container-about" id="about">
+    <main class="container container-about">
         <div class="about-page-wrapper">
-            <div class="about-left-column">
+            <section class="about-layout">
                 <div class="window pixel-border">
                     <div class="window-titlebar">
                         <span>[ user_profile.ini ]</span>
@@ -141,41 +144,44 @@
                     </div> 
                     <div class="resize-handle"></div>
                 </div> 
-                
-                <div class="window pixel-border" id="contact">
-                    <div class="window-titlebar">
-                        <span>[ comms_link.exe ]</span>
-                        <div class="window-buttons">
-                            <span class="window-btn">_</span>
-                            <span class="window-btn">□</span>
-                            <span class="window-btn">X</span>
-                        </div>
+                <div class="about-page-wrapper">
+        
+        <section class="about-layout">
+            <div class="window pixel-border" style="margin-top: 20px;">
+                <div class="window-titlebar">
+                    <span>[ comms_link.exe ]</span>
+                    <div class="window-buttons">
+                        <span class="window-btn">_</span>
+                        <span class="window-btn">□</span>
+                        <span class="window-btn">X</span>
                     </div>
-                    <div class="window-content contact-content">
-                        <h2>[ Get In Touch ]</h2>
-                        <p>
-                            I'm currently seeking new opportunities and am always open to discussing new projects,
-                            creative ideas, or just connecting with other people in the industry.
-                        </p>
-                        <div class="contact-links">
-                            <a href="https://www.linkedin.com/in/muhdhazimabdhalim/" target="_blank" class="btn-pixel contact-btn linkedin">
-                                [ LinkedIn ]
-                            </a>
-                            <a href="https://hajimbo.itch.io/" target="_blank" class="btn-pixel contact-btn itch">
-                                [ Itch.io ]
-                            </a>
-                            <a href="https://github.com/Hajimbo04" target="_blank" class="btn-pixel contact-btn github">
-                                [ GitHub ]
-                            </a>
-                            <a href="mailto:muhdhazim13035@gmail.com" class="btn-pixel contact-btn email">
-                                [ Email Me ]
-                            </a>
-                        </div>
-                        <div class="resize-handle"></div>
-                    </div> 
                 </div>
+                <div class="window-content contact-content">
+                    <h2>[ Get In Touch ]</h2>
+                    <p>
+                        I'm currently seeking new opportunities and am always open to discussing new projects,
+                        creative ideas, or just connecting with other people in the industry.
+                    </p>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/muhdhazimabdhalim/" target="_blank" class="btn-pixel contact-btn linkedin">
+                            [ LinkedIn ]
+                        </a>
+                        <a href="https://hajimbo.itch.io/" target="_blank" class="btn-pixel contact-btn itch">
+                            [ Itch.io ]
+                        </a>
+                        <a href="https://github.com/Hajimbo04" target="_blank" class="btn-pixel contact-btn github">
+                            [ GitHub ]
+                        </a>
+                        <a href="mailto:muhdhazim13035@gmail.com" class="btn-pixel contact-btn email">
+                            [ Email Me ]
+                        </a>
+                    </div>
+                </div> 
             </div>
-
+        </section> 
+    </div>
+            </section> 
+            
             <div class="about-right-column">
                 <section class="education-window">
                     <div class="window pixel-border">
@@ -213,7 +219,7 @@
                                     <h4>[ Core Competencies ]</h4>
                                     <ul>
                                         <li>Unity (C#) Programming</li>
-                                        <li>Unreal Engine (Blueprints)</li>
+                                                                                <li>Unreal Engine (Blueprints)</li>
                                         <li>Project Management (Agile)</li>
                                         <li>Game & Level Design</li>
                                     </ul>
@@ -255,16 +261,14 @@
                                         <li>Data Analysis (Python & R)</li>
                                         <li>Game Balancing</li>
                                     </ul>
-                                </div> 
                             </div> 
-                            <div class="resize-handle"></div>
                         </div> 
-                    </div>
+                        <div class="resize-handle"></div>
+                    </div> 
                 </section>
             </div>
         </div>
     </main>
-
     <footer class="main-footer">
         <div class="social-links">
             <a href="https://www.linkedin.com/in/muhdhazimabdhalim/" target="_blank">[ LinkedIn ]</a>

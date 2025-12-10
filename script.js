@@ -278,19 +278,25 @@ function setupProjectInteractions() {
 }
 
 function setupFilters() {
-    const filterContainer = document.querySelector('.filter-buttons');
-    if (filterContainer) {
-        const filterButtons = filterContainer.querySelectorAll('.filter-btn');
+    // New selector: target all list items with class 'folder-item' inside the explorer window
+    const filterButtons = document.querySelectorAll('.explorer-sidebar .folder-item'); 
+    
+    if (filterButtons.length > 0) {
         const allProjectCards = document.querySelectorAll('.project-card');
         
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const filterValue = button.dataset.filter;
+                
+                // Update active state on the new list items (important for visual feedback)
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
                 
                 allProjectCards.forEach(card => {
-                    if (filterValue === 'all' || card.dataset.category === filterValue) {
+                    // Get all categories for this card, split by spaces, and convert to lower case
+                    const cardCategories = card.dataset.category.toLowerCase().split(' '); 
+
+                    if (filterValue === 'all' || cardCategories.includes(filterValue)) {
                         card.style.display = 'block'; 
                     } else {
                         card.style.display = 'none'; 
@@ -298,6 +304,11 @@ function setupFilters() {
                 });
             });
         });
+    }
+    // Remove the old filter button container since you've moved to a sidebar (optional but clean)
+    const oldContainer = document.querySelector('.filter-buttons');
+    if (oldContainer) {
+        oldContainer.style.display = 'none';
     }
 }
 
@@ -561,13 +572,14 @@ function initGallery() {
     } 
 }
 
+//change filter list
 function applyUrlPreferences() {
     const urlParams = new URLSearchParams(window.location.search);
     const roleParam = urlParams.get('role'); 
     const filterParam = urlParams.get('filter'); 
 
     if (filterParam) {
-        const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterParam}"]`);
+        const targetBtn = document.querySelector(`.folder-item[data-filter="${filterParam}"]`);
         setTimeout(() => { if (targetBtn) targetBtn.click(); }, 100);
     }
 
@@ -776,6 +788,7 @@ function updateNavLinks(role, filter) {
     }
 }
 
+//change filter list
 function loadHomeCarousel(role) {
     const track = document.querySelector('.carousel-track');
     if (!track) return;
